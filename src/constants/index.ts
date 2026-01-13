@@ -1,7 +1,7 @@
 // API Configuration
 export const API_CONFIG = {
-  BASE_URL: 'http://localhost:3001/api',
-  UPLOAD_URL: 'http://localhost:3001/api/upload',
+  BASE_URL: import.meta.env.VITE_API_BASE_URL || '/api',
+  UPLOAD_URL: `${import.meta.env.VITE_API_BASE_URL || '/api'}/upload`,
   TIMEOUT: 10000, // 10 seconds
 } as const;
 
@@ -46,7 +46,7 @@ export const ERROR_MESSAGES = {
   PASSWORD_TOO_SHORT: '密码长度至少6位',
 } as const;
 
-// Success Messages  
+// Success Messages
 export const SUCCESS_MESSAGES = {
   SAVE_SUCCESS: '保存成功！',
   UPLOAD_SUCCESS: '上传成功！',
