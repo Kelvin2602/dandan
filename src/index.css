@@ -1,0 +1,94 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-primary: #ca231e;
+  --color-secondary: #b81c25;
+  --color-hoverRed: #ba141a;
+  --color-bgFooter: #f2f2f2;
+  --color-borderFooter: #dedede;
+  --color-accent: #ea2b32;
+  --color-textMain: #333333;
+  --color-textSub: #666666;
+  --color-textLight: #999999;
+  --color-bgBlock: #fff;
+  --color-noticeBg: #ebeced;
+  --color-borderGray: #dedede;
+
+  --font-family-sans: 'Microsoft YaHei', 'SimHei', Arial, sans-serif;
+
+  --animate-marquee-vertical: marquee-vertical 20s linear infinite;
+  --animate-marquee: marquee 25s linear infinite;
+  --animate-fadeIn: fadeIn 0.2s ease-out forwards;
+
+  @keyframes marquee-vertical {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-50%);
+    }
+  }
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+/* Custom Utilities */
+@utility w-container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Typography Overrides */
+h1,
+.h1 {
+  font-size: 24px;
+}
+h2,
+.h2 {
+  font-size: 18px;
+}
+h3,
+.h3 {
+  font-size: 16px;
+}
+.menu-item {
+  font-size: 16px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Pause animation */
+.pause-on-hover:hover {
+  animation-play-state: paused;
+}

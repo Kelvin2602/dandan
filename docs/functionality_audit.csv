@@ -1,0 +1,18 @@
+Feature,Status,Notes
+Homepage,Verified,Displays dynamic content from DB
+Project List,Verified,Fetches & filters active projects
+Project Detail,Verified,Shows details & donation form
+News List,Verified,Fetches news items
+News Detail,Verified,Shows content
+Donation Flow,Verified,Frontend form works (API connects)
+Volunteer Signup,Verified,Submits to DB
+Admin Login,Verified,Auth API & UI ready (admin/123456)
+Admin Dashboard,Verified,Stats overview
+Project Mgmt,Verified,CRUD + Search + Image Upload
+News Mgmt,Verified,CRUD + Search + Image Upload
+Donation Mgmt,Verified,List + Export + Manual Add
+Volunteer Mgmt,Verified,List + Approve/Reject + Export
+Site Settings,Verified,Configurable Header/Footer/Banners/Notices
+File Upload,Verified,Multer + /api/upload endpoint
+Database,Verified,Schema migrated, seed data active
+Mobile Responsive,Verified,Tailwind classes used throughout

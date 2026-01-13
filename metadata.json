@@ -1,0 +1,5 @@
+{
+  "name": "Xi'an Charity Association Portal",
+  "description": "A modern React reconstruction of the Xi'an Charity Association website using TypeScript and Tailwind CSS, featuring project listings, donation records, news, and charity funds.",
+  "requestFramePermissions": []
+}

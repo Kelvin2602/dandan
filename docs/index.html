@@ -1,0 +1,1968 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<meta name="keywords" content="西安市慈善会,西安慈善,西安慈善协会"/>
+<meta name="description" content="西安市慈善会（英文译名：Fhilanthropy Association  of Xi’an  City缩写为：FAXC）。由热心于慈善事业的社会各界人士，法人及其他社会组织志愿参加组成，依法登记注册，具有独立法人资格的全市性非营利公益社会团体。会址：中国陕西省西安市。"/>
+
+<link rel="shortcut icon" href="https://res-img.n.gongyibao.cn/uploads/1dbdc970-d95e-45a8-859b-86e4e9abe89e/20190619/280a013ec8d941a48bc849146b874229.ico"/>
+<title>西安市慈善会</title>
+<link href="https://res-img.n.gongyibao.cn/res_cdn/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://res-img.n.gongyibao.cn/res_cdn/bootstrap/3.1.1/css/bootstrap-dialog.min.css" type="text/css" rel="stylesheet"/>
+<link rel="stylesheet" type="text/css" href="static/1dbdc970-d95e-45a8-859b-86e4e9abe89e/bm61/static/css/base.css?v=20210611"/>
+<link rel="stylesheet" type="text/css" href="static/1dbdc970-d95e-45a8-859b-86e4e9abe89e/bm61/static/css/indexStyle.css?v=202104161143"/>
+
+<script src="https://res-img.n.gongyibao.cn/res_cdn/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://res-img.n.gongyibao.cn/res_cdn/jquery-qrcode/jquery.qrcode.min.js"></script>
+<script src="https://res-img.n.gongyibao.cn/res_cdn/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="static/default/static/js/auth.js"></script>
+
+<script src="https://res-img.n.gongyibao.cn/res_cdn/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://res-img.n.gongyibao.cn/res_cdn/bootstrap/3.1.1/js/bootstrap-dialog.min.js"></script>
+<script type="text/javascript" src="static/default/static/js/selftabs_hubei.js"></script><!--tab切换-->
+<script type="text/javascript" src="static/default/static/js/imgScrol.js"></script><!--合作伙伴滚动-->
+<script src="static/default/static/js/index-js.js"></script>
+<script type="text/javascript" src="static/default/static/js/template-web.js"></script>
+<script type="text/javascript" src="static/default/static/js/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript" src="static/default/static/js/common_v2.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('img').each(function () {
+            if($(this).attr('src') === '') {
+                $(this).attr('src', "https://res-img.n.gongyibao.cn/uploads/1dbdc970-d95e-45a8-859b-86e4e9abe89e/20201207/915c9cafd686457cb35f5fc493fd91bf.jpg");
+                console.info('1111');
+            }
+        });
+        // $('img').error(function () {
+        //     $(this).attr('src', "https://res-img.n.gongyibao.cn/uploads/1dbdc970-d95e-45a8-859b-86e4e9abe89e/20201207/915c9cafd686457cb35f5fc493fd91bf.jpg");
+        //     console.info('222');
+        // });
+    });
+    $(document).ready(function(){
+        $('img').each(function(){
+            var error = false;
+            if (!this.complete) {
+                error = true;
+            }
+
+            if (typeof this.naturalWidth != "undefined" && this.naturalWidth == 0) {
+                error = true;
+            }
+
+            if(error){
+                $(this).bind('error.replaceSrc',function(){
+                    this.src = "https://res-img.n.gongyibao.cn/uploads/1dbdc970-d95e-45a8-859b-86e4e9abe89e/20201207/915c9cafd686457cb35f5fc493fd91bf.jpg";
+
+                    $(this).unbind('error.replaceSrc');
+                }).trigger('load');
+            }
+        });
+    });
+</script>
+
+
+    <script src="https://res-img.n.gongyibao.cn/res_cdn/vue/vue.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //合作伙伴滚动
+            $(".Link-list").imgscroll({
+                speed: 50,    //图片滚动速度
+                amount: 0,    //图片滚动过渡时间
+                width: 1,     //图片滚动步数
+                dir: "left"   // "left" 或 "up" 向左或向上滚动
+            });
+            //新闻资讯tab切换
+            $(function () {
+                //titclass：标题div的class，conclass：内容div的class，subdiv:子div的class,hoverclass：标题div的li的鼠标经过样式，movestyle：切换方式（'mouserover'鼠标经过，'onclick' 点击）参数都可以省略。标题div必须是div》ul》li 的格式  首先当然要引用jquery
+                //实例1
+                $('.titdiv').selftabs({
+                    titclass: 'titdiv',
+                    conclass: 'condiv',
+                    subdiv: 'subdiv',
+                    hoverclass: 'onli',
+                    movestyle: 'mouseover'
+                });
+
+            });
+        })
+    </script>
+</head>
+<body>
+<!--header.html-->
+<div class="topBar">
+    <div class="box">
+        <div class="welcomeTxt fL pr">您好，欢迎来到西安市慈善会！！！</div>
+        <div class="loginBar">
+            <a href="javascript:void(0);" onclick="globalLogin()" class="global_ctl_login">登录</a>|<a href="javascript:void(0);" onclick="globalReg()" class="global_ctl_reg">注册</a>
+            <a href="javascript:void(0);" style="display:none" class="global_ctl_userinfo global_ctl_showuserinfo"></a><a class="global_ctl_userinfo" href="javascript:void(0);" style="display:none" onclick="logOut()">退出</a>
+        </div>
+    </div>
+</div>
+<div class="headerBan">
+    <img src="https://res-img.n.gongyibao.cn/uploads/1dbdc970-d95e-45a8-859b-86e4e9abe89e/20240516/baba08128b1845d5866db0a8ed417d1f.jpg">
+</div>
+<!--nav-->
+<div class="menu">
+    <!--nav-->
+    <div class="box">
+        <ul id="nav" class="displayFlex layout">
+            <li id="homeLi" class="mainlevel flexChild"><a href="index.html"><h1>首页</h1></a></li>
+            
+            <li class="mainlevel flexChild"><a id="bcca8690-6df7-4fd6-b68b-ec7b8ccc3a9c" href="g.html?id=bcca8690-6df7-4fd6-b68b-ec7b8ccc3a9c&URLparamName=信息公开"><h1>信息公开</h1></a>
+                <ul>
+            
+            <li id="31ffc199-c47f-496c-a104-a118622cf704">
+                <a href="n.html" >网络资料下载</a>
+            <script>
+                var t = "true";
+                if(t=="false"){
+                    $("#31ffc199-c47f-496c-a104-a118622cf704").find("a").attr({"href":"n.html","target":"_blank"});
+                }else{
+                    $("#31ffc199-c47f-496c-a104-a118622cf704").find("a").attr({"href":"n.html?id=31ffc199-c47f-496c-a104-a118622cf704"});
+                }
+            </script>
+            </li>            
+            <script>
+                if(1 != 3){
+                    if(1 == 1 ){
+                        $("#31ffc199-c47f-496c-a104-a118622cf704").parent("ul").parent("li").find("a").attr("href","n.html?id=31ffc199-c47f-496c-a104-a118622cf704");
+                    }
+                    $("#31ffc199-c47f-496c-a104-a118622cf704").find("a").attr("href","n.html?id=31ffc199-c47f-496c-a104-a118622cf704");
+                }
+            </script>
+            
+            <li id="a7d62116-22fa-47fd-ae5d-f5ee35fff1b9">
+                <a href="n.html" >财务工作报告</a>
+            <script>
+                var t = "true";
+                if(t=="false"){
+                    $("#a7d62116-22fa-47fd-ae5d-f5ee35fff1b9").find("a").attr({"href":"n.html","target":"_blank"});
+                }else{
+                    $("#a7d62116-22fa-47fd-ae5d-f5ee35fff1b9").find("a").attr({"href":"n.html?id=a7d62116-22fa-47fd-ae5d-f5ee35fff1b9"});
+                }
+            </script>
+            </li>            
+            <script>
+                if(1 != 3){
+                    if(2 == 1 ){
+                        $("#a7d62116-22fa-47fd-ae5d-f5ee35fff1b9").parent("ul").parent("li").find("a").attr("href","n.html?id=a7d62116-22fa-47fd-ae5d-f5ee35fff1b9");
+                    }
+                    $("#a7d62116-22fa-47fd-ae5d-f5ee35fff1b9").find("a").attr("href","n.html?id=a7d62116-22fa-47fd-ae5d-f5ee35fff1b9");
+                }
+            </script>
+            
+            <li id="27a8b486-b07e-4e3a-82b9-37c1aaac5ff5">
+                <a href="n.html" >年度工作报告</a>
+            <script>
+                var t = "true";
+                if(t=="false"){
+                    $("#27a8b486-b07e-4e3a-82b9-37c1aaac5ff5").find("a").attr({"href":"n.html","target":"_blank"});
+                }else{
+                    $("#27a8b486-b07e-4e3a-82b9-37c1aaac5ff5").find("a").attr({"href":"n.html?id=27a8b486-b07e-4e3a-82b9-37c1aaac5ff5"});
+                }
+            </script>
+            </li>            
+            <script>
+                if(1 != 3){
+                    if(3 == 1 ){
+                        $("#27a8b486-b07e-4e3a-82b9-37c1aaac5ff5").parent("ul").parent("li").find("a").attr("href","n.html?id=27a8b486-b07e-4e3a-82b9-37c1aaac5ff5");
+                    }
+                    $("#27a8b486-b07e-4e3a-82b9-37c1aaac5ff5").find("a").attr("href","n.html?id=27a8b486-b07e-4e3a-82b9-37c1aaac5ff5");
+                }
+            </script>
+            
+            <li id="2b0b24a9-1376-4a78-accb-202e9d6b3b78">
+                <a href="g.html" >收支明细</a>
+            <script>
+                var t = "true";
+                if(t=="false"){
+                    $("#2b0b24a9-1376-4a78-accb-202e9d6b3b78").find("a").attr({"href":"g.html","target":"_blank"});
+                }else{
+                    $("#2b0b24a9-1376-4a78-accb-202e9d6b3b78").find("a").attr({"href":"g.html?id=2b0b24a9-1376-4a78-accb-202e9d6b3b78"});
+                }
+            </script>
+            </li>            
+            <script>
+                if(3 != 3){
+                    if(4 == 1 ){
+                        $("#2b0b24a9-1376-4a78-accb-202e9d6b3b78").parent("ul").parent("li").find("a").attr("href","g.html?id=2b0b24a9-1376-4a78-accb-202e9d6b3b78");
+                    }
+                    $("#2b0b24a9-1376-4a78-accb-202e9d6b3b78").find("a").attr("href","g.html?id=2b0b24a9-1376-4a78-accb-202e9d6b3b78");
+                }
+            </script>
+            
+            <li id="117c606a-a213-499d-ba93-c700cb22c7ba">
+                <a href="n.html" >抗震救灾募集明细</a>
+            <script>
+                var t = "true";
+                if(t=="false"){
+                    $("#117c606a-a213-499d-ba93-c700cb22c7ba").find("a").attr({"href":"n.html","target":"_blank"});
+                }else{
+                    $("#117c606a-a213-499d-ba93-c700cb22c7ba").find("a").attr({"href":"n.html?id=117c606a-a213-499d-ba93-c700cb22c7ba"});
+                }
+            </script>
+            </li>            
+            <script>
+                if(1 != 3){
+                    if(5 == 1 ){
+                        $("#117c606a-a213-499d-ba93-c700cb22c7ba").parent("ul").parent("li").find("a").attr("href","n.html?id=117c606a-a213-499d-ba93-c700cb22c7ba");
+                    }
+                    $("#117c606a-a213-499d-ba93-c700cb22c7ba").find("a").attr("href","n.html?id=117c606a-a213-499d-ba93-c700cb22c7ba");
+                }
+            </script>
+            
+            <li id="d7bc25b7-171e-4562-ba99-d7a07cf3bbd8">
+                <a href="n.html" >救助英雄支出明细</a>
+            <script>
+                var t = "true";
+                if(t=="false"){
+                    $("#d7bc25b7-171e-4562-ba99-d7a07cf3bbd8").find("a").attr({"href":"n.html","target":"_blank"});
+                }else{
+                    $("#d7bc25b7-171e-4562-ba99-d7a07cf3bbd8").find("a").attr({"href":"n.html?id=d7bc25b7-171e-4562-ba99-d7a07cf3bbd8"});
+                }
+            </script>
+            </li>            
+            <script>
+                if(1 != 3){
+                    if(6 == 1 ){
+                        $("#d7bc25b7-171e-4562-ba99-d7a07cf3bbd8").parent("ul").parent("li").find("a").attr("href","n.html?id=d7bc25b7-171e-4562-ba99-d7a07cf3bbd8");
+                    }
+                    $("#d7bc25b7-171e-4562-ba99-d7a07cf3bbd8").find("a").attr("href","n.html?id=d7bc25b7-171e-4562-ba99-d7a07cf3bbd8");
+                }
+            </script>
+            
+            <li id="9d9d5ee4-c4f1-48d6-bf98-85197de9584b">
+                <a href="n.html" >抗洪救灾募集明细</a>
+            <script>
+                var t = "true";
+                if(t=="false"){
+                    $("#9d9d5ee4-c4f1-48d6-bf98-85197de9584b").find("a").attr({"href":"n.html","target":"_blank"});
+                }else{
+                    $("#9d9d5ee4-c4f1-48d6-bf98-85197de9584b").find("a").attr({"href":"n.html?id=9d9d5ee4-c4f1-48d6-bf98-85197de9584b"});
+                }
+            </script>
+            </li>            
+            <script>
+                if(1 != 3){
+                    if(7 == 1 ){
+                        $("#9d9d5ee4-c4f1-48d6-bf98-85197de9584b").parent("ul").parent("li").find("a").attr("href","n.html?id=9d9d5ee4-c4f1-48d6-bf98-85197de9584b");
+                    }
+                    $("#9d9d5ee4-c4f1-48d6-bf98-85197de9584b").find("a").attr("href","n.html?id=9d9d5ee4-c4f1-48d6-bf98-85197de9584b");
+                }
+            </script>
+            
+            <li id="d65d321e-77f5-4c9e-bcac-a5724c7cc60a">
+                <a href="n.html" >抗疫期间募集明细</a>
+            <script>
+                var t = "true";
+                if(t=="false"){
+                    $("#d65d321e-77f5-4c9e-bcac-a5724c7cc60a").find("a").attr({"href":"n.html","target":"_blank"});
+                }else{
+                    $("#d65d321e-77f5-4c9e-bcac-a5724c7cc60a").find("a").attr({"href":"n.html?id=d65d321e-77f5-4c9e-bcac-a5724c7cc60a"});
+                }
+            </script>
+            </li>            
+            <script>
+                if(1 != 3){
+                    if(8 == 1 ){
+                        $("#d65d321e-77f5-4c9e-bcac-a5724c7cc60a").parent("ul").parent("li").find("a").attr("href","n.html?id=d65d321e-77f5-4c9e-bcac-a5724c7cc60a");
+                    }
+                    $("#d65d321e-77f5-4c9e-bcac-a5724c7cc60a").find("a").attr("href","n.html?id=d65d321e-77f5-4c9e-bcac-a5724c7cc60a");
+                }
+            </script>
+            
+            <li id="2081c8dd-31e6-434f-9676-196381ae6530">
+                <a href="n.html" >新冠疫情募集明细</a>
+            <script>
+                var t = "true";
+                if(t=="false"){
+                    $("#2081c8dd-31e6-434f-9676-196381ae6530").find("a").attr({"href":"n.html","target":"_blank"});
+                }else{
+                    $("#2081c8dd-31e6-434f-9676-196381ae6530").find("a").attr({"href":"n.html?id=2081c8dd-31e6-434f-9676-196381ae6530"});
+                }
+            </script>
+            </li>            
+            <script>
+                if(1 != 3){
+                    if(9 == 1 ){
+                        $("#2081c8dd-31e6-434f-9676-196381ae6530").parent("ul").parent("li").find("a").attr("href","n.html?id=2081c8dd-31e6-434f-9676-196381ae6530");
+                    }
+                    $("#2081c8dd-31e6-434f-9676-196381ae6530").find("a").attr("href","n.html?id=2081c8dd-31e6-434f-9676-196381ae6530");
+                }
+            </script>
+            
+        </ul>
+            </li>
+            <script>
+                if(1 == 3){
+                    $("#bcca8690-6df7-4fd6-b68b-ec7b8ccc3a9c").attr("href","g.html?id=bcca8690-6df7-4fd6-b68b-ec7b8ccc3a9c&URLparamName=信息公开");
+                }
+            </script>
+            
+            <li class="mainlevel flexChild"><a id="33565255-e9d0-4555-9dfd-a906fa4e6c35" href="n.html?id=33565255-e9d0-4555-9dfd-a906fa4e6c35&URLparamName=新闻中心"><h1>新闻中心</h1></a>
+                <ul>
+            
+            <li id="22b08250-06fd-41d8-8416-48a94bd03c26">
+                <a href="n.html" >慈善资讯</a>
+            <script>
+                var t = "true";
+                if(t=="false"){
+                    $("#22b08250-06fd-41d8-8416-48a94bd03c26").find("a").attr({"href":"n.html","target":"_blank"});
+                }else{
+                    $("#22b08250-06fd-41d8-8416-48a94bd03c26").find("a").attr({"href":"n.html?id=22b08250-06fd-41d8-8416-48a94bd03c26"});
+                }
+            </script>
+            </li>            
+            <script>
+                if(1 != 3){
+                    if(1 == 1 ){
+                        $("#22b08250-06fd-41d8-8416-48a94bd03c26").parent("ul").parent("li").find("a").attr("href","n.html?id=22b08250-06fd-41d8-8416-48a94bd03c26");
+                    }
+                    $("#22b08250-06fd-41d8-8416-48a94bd03c26").find("a").attr("href","n.html?id=22b08250-06fd-41d8-8416-48a94bd03c26");
+                }
+            </script>
+            
+            <li id="ca337931-34dd-4ec2-8b7c-c12851ccaefe">
+                <a href="n.html" >媒体报道</a>
+            <script>
+                var t = "true";
+                if(t=="false"){
+                    $("#ca337931-34dd-4ec2-8b7c-c12851ccaefe").find("a").attr({"href":"n.html","target":"_blank"});
+                }else{
+                    $("#ca337931-34dd-4ec2-8b7c-c12851ccaefe").find("a").attr({"href":"n.html?id=ca337931-34dd-4ec2-8b7c-c12851ccaefe"});
+                }
+            </script>
+            </li>            
+            <script>
+                if(1 != 3){
+                    if(2 == 1 ){
+                        $("#ca337931-34dd-4ec2-8b7c-c12851ccaefe").parent("ul").parent("li").find("a").attr("href","n.html?id=ca337931-34dd-4ec2-8b7c-c12851ccaefe");
+                    }
+                    $("#ca337931-34dd-4ec2-8b7c-c12851ccaefe").find("a").attr("href","n.html?id=ca337931-34dd-4ec2-8b7c-c12851ccaefe");
+                }
+            </script>
+            
+            <li id="402756de-333f-4452-9285-dff0abab59b4">
+                <a href="n.html" >区县动态</a>
+            <script>
+                var t = "true";
+                if(t=="false"){
+                    $("#402756de-333f-4452-9285-dff0abab59b4").find("a").attr({"href":"n.html","target":"_blank"});
+                }else{
+                    $("#402756de-333f-4452-9285-dff0abab59b4").find("a").attr({"href":"n.html?id=402756de-333f-4452-9285-dff0abab59b4"});
+                }
+            </script>
+            </li>            
+            <script>
+                if(1 != 3){
+                    if(3 == 1 ){
+                        $("#402756de-333f-4452-9285-dff0abab59b4").parent("ul").parent("li").find("a").attr("href","n.html?id=402756de-333f-4452-9285-dff0abab59b4");
+                    }
+                    $("#402756de-333f-4452-9285-dff0abab59b4").find("a").attr("href","n.html?id=402756de-333f-4452-9285-dff0abab59b4");
+                }
+            </script>
+            
+            <li id="2d6dbe1a-fd78-4396-b334-ff23516d56d6">
+                <a href="n.html" >通知公告</a>
+            <script>
+                var t = "true";
+                if(t=="false"){
+                    $("#2d6dbe1a-fd78-4396-b334-ff23516d56d6").find("a").attr({"href":"n.html","target":"_blank"});
+                }else{
+                    $("#2d6dbe1a-fd78-4396-b334-ff23516d56d6").find("a").attr({"href":"n.html?id=2d6dbe1a-fd78-4396-b334-ff23516d56d6"});
+                }
+            </script>
+            </li>            
+            <script>
+                if(1 != 3){
+                    if(4 == 1 ){
+                        $("#2d6dbe1a-fd78-4396-b334-ff23516d56d6").parent("ul").parent("li").find("a").attr("href","n.html?id=2d6dbe1a-fd78-4396-b334-ff23516d56d6");
+                    }
+                    $("#2d6dbe1a-fd78-4396-b334-ff23516d56d6").find("a").attr("href","n.html?id=2d6dbe1a-fd78-4396-b334-ff23516d56d6");
+                }
+            </script>
+            
+            <li id="c75e41a4-6a05-4e4b-821e-f0b6eb1f212b">
+                <a href="n.html" >慈善季刊</a>
+            <script>
+                var t = "true";
+                if(t=="false"){
+                    $("#c75e41a4-6a05-4e4b-821e-f0b6eb1f212b").find("a").attr({"href":"n.html","target":"_blank"});
+                }else{
+                    $("#c75e41a4-6a05-4e4b-821e-f0b6eb1f212b").find("a").attr({"href":"n.html?id=c75e41a4-6a05-4e4b-821e-f0b6eb1f212b"});
+                }
+            </script>
+            </li>            
+            <script>
+                if(2 != 3){
+                    if(5 == 1 ){
+                        $("#c75e41a4-6a05-4e4b-821e-f0b6eb1f212b").parent("ul").parent("li").find("a").attr("href","n.html?id=c75e41a4-6a05-4e4b-821e-f0b6eb1f212b");
+                    }
+                    $("#c75e41a4-6a05-4e4b-821e-f0b6eb1f212b").find("a").attr("href","n.html?id=c75e41a4-6a05-4e4b-821e-f0b6eb1f212b");
+                }
+            </script>
+            
+            <li id="aa4ae1a0-15ad-4a63-86d0-d713c9602993">
+                <a href="n.html" >工作简报</a>
+            <script>
+                var t = "true";
+                if(t=="false"){
+                    $("#aa4ae1a0-15ad-4a63-86d0-d713c9602993").find("a").attr({"href":"n.html","target":"_blank"});
+                }else{
+                    $("#aa4ae1a0-15ad-4a63-86d0-d713c9602993").find("a").attr({"href":"n.html?id=aa4ae1a0-15ad-4a63-86d0-d713c9602993"});
+                }
+            </script>
+            </li>            
+            <script>
+                if(1 != 3){
+                    if(6 == 1 ){
+                        $("#aa4ae1a0-15ad-4a63-86d0-d713c9602993").parent("ul").parent("li").find("a").attr("href","n.html?id=aa4ae1a0-15ad-4a63-86d0-d713c9602993");
+                    }
+                    $("#aa4ae1a0-15ad-4a63-86d0-d713c9602993").find("a").attr("href","n.html?id=aa4ae1a0-15ad-4a63-86d0-d713c9602993");
+                }
+            </script>
+            
+            <li id="8ac7f8e5-f20d-41d4-b654-79e65d3a4fdc">
+                <a href="n.html" >慈善视频</a>
+            <script>
+                var t = "true";
+                if(t=="false"){
+                    $("#8ac7f8e5-f20d-41d4-b654-79e65d3a4fdc").find("a").attr({"href":"n.html","target":"_blank"});
+                }else{
+                    $("#8ac7f8e5-f20d-41d4-b654-79e65d3a4fdc").find("a").attr({"href":"n.html?id=8ac7f8e5-f20d-41d4-b654-79e65d3a4fdc"});
+                }
+            </script>
+            </li>            
+            <script>
+                if(1 != 3){
+                    if(7 == 1 ){
+                        $("#8ac7f8e5-f20d-41d4-b654-79e65d3a4fdc").parent("ul").parent("li").find("a").attr("href","n.html?id=8ac7f8e5-f20d-41d4-b654-79e65d3a4fdc");
+                    }
+                    $("#8ac7f8e5-f20d-41d4-b654-79e65d3a4fdc").find("a").attr("href","n.html?id=8ac7f8e5-f20d-41d4-b654-79e65d3a4fdc");
+                }
+            </script>
+            
+        </ul>
+            </li>
+            <script>
+                if(1 == 3){
+                    $("#33565255-e9d0-4555-9dfd-a906fa4e6c35").attr("href","n.html?id=33565255-e9d0-4555-9dfd-a906fa4e6c35&URLparamName=新闻中心");
+                }
+            </script>
+            
+            <li class="mainlevel flexChild"><a id="d71e2ae3-298d-416c-a2b3-81ed13d16050" href="p.html?id=d71e2ae3-298d-416c-a2b3-81ed13d16050&URLparamName=慈善项目"><h1>慈善项目</h1></a>
+                <ul>
+            
+        </ul>
+            </li>
+            <script>
+                if(3 == 3){
+                    $("#d71e2ae3-298d-416c-a2b3-81ed13d16050").attr("href","p.html?id=d71e2ae3-298d-416c-a2b3-81ed13d16050&URLparamName=慈善项目");
+                }
+            </script>
+            
+            <li class="mainlevel flexChild"><a id="00d018b2-90b0-4258-a590-4245b583fa1b" href="f.html?id=00d018b2-90b0-4258-a590-4245b583fa1b&URLparamName=公益基金"><h1>公益基金</h1></a>
+                <ul>
+            
+        </ul>
+            </li>
+            <script>
+                if(3 == 3){
+                    $("#00d018b2-90b0-4258-a590-4245b583fa1b").attr("href","f.html?id=00d018b2-90b0-4258-a590-4245b583fa1b&URLparamName=公益基金");
+                }
+            </script>
+            
+            <li class="mainlevel flexChild"><a id="9bafe82a-af77-411f-9c54-5bec4c29b17a" href="n.html?id=9bafe82a-af77-411f-9c54-5bec4c29b17a&URLparamName=志愿服务"><h1>志愿服务</h1></a>
+                <ul>
+            
+            <li id="e987c155-f9c7-42d7-9e2c-20adbb543ba6">
+                <a href="n.html" >慈善志愿者动态</a>
+            <script>
+                var t = "true";
+                if(t=="false"){
+                    $("#e987c155-f9c7-42d7-9e2c-20adbb543ba6").find("a").attr({"href":"n.html","target":"_blank"});
+                }else{
+                    $("#e987c155-f9c7-42d7-9e2c-20adbb543ba6").find("a").attr({"href":"n.html?id=e987c155-f9c7-42d7-9e2c-20adbb543ba6"});
+                }
+            </script>
+            </li>            
+            <script>
+                if(1 != 3){
+                    if(1 == 1 ){
+                        $("#e987c155-f9c7-42d7-9e2c-20adbb543ba6").parent("ul").parent("li").find("a").attr("href","n.html?id=e987c155-f9c7-42d7-9e2c-20adbb543ba6");
+                    }
+                    $("#e987c155-f9c7-42d7-9e2c-20adbb543ba6").find("a").attr("href","n.html?id=e987c155-f9c7-42d7-9e2c-20adbb543ba6");
+                }
+            </script>
+            
+            <li id="6c648d19-1630-483a-baad-e4a3fab411df">
+                <a href="n.html" >先进志愿者</a>
+            <script>
+                var t = "true";
+                if(t=="false"){
+                    $("#6c648d19-1630-483a-baad-e4a3fab411df").find("a").attr({"href":"n.html","target":"_blank"});
+                }else{
+                    $("#6c648d19-1630-483a-baad-e4a3fab411df").find("a").attr({"href":"n.html?id=6c648d19-1630-483a-baad-e4a3fab411df"});
+                }
+            </script>
+            </li>            
+            <script>
+                if(1 != 3){
+                    if(2 == 1 ){
+                        $("#6c648d19-1630-483a-baad-e4a3fab411df").parent("ul").parent("li").find("a").attr("href","n.html?id=6c648d19-1630-483a-baad-e4a3fab411df");
+                    }
+                    $("#6c648d19-1630-483a-baad-e4a3fab411df").find("a").attr("href","n.html?id=6c648d19-1630-483a-baad-e4a3fab411df");
+                }
+            </script>
+            
+            <li id="1edc034a-a3c7-4665-a828-283931b23761">
+                <a href="n.html" >招募志愿者</a>
+            <script>
+                var t = "true";
+                if(t=="false"){
+                    $("#1edc034a-a3c7-4665-a828-283931b23761").find("a").attr({"href":"n.html","target":"_blank"});
+                }else{
+                    $("#1edc034a-a3c7-4665-a828-283931b23761").find("a").attr({"href":"n.html?id=1edc034a-a3c7-4665-a828-283931b23761"});
+                }
+            </script>
+            </li>            
+            <script>
+                if(1 != 3){
+                    if(3 == 1 ){
+                        $("#1edc034a-a3c7-4665-a828-283931b23761").parent("ul").parent("li").find("a").attr("href","n.html?id=1edc034a-a3c7-4665-a828-283931b23761");
+                    }
+                    $("#1edc034a-a3c7-4665-a828-283931b23761").find("a").attr("href","n.html?id=1edc034a-a3c7-4665-a828-283931b23761");
+                }
+            </script>
+            
+        </ul>
+            </li>
+            <script>
+                if(1 == 3){
+                    $("#9bafe82a-af77-411f-9c54-5bec4c29b17a").attr("href","n.html?id=9bafe82a-af77-411f-9c54-5bec4c29b17a&URLparamName=志愿服务");
+                }
+            </script>
+            
+            <li class="mainlevel flexChild"><a id="fe4eecf7-4b04-4793-87dc-01bf669926e4" href="n.html?id=fe4eecf7-4b04-4793-87dc-01bf669926e4&URLparamName=善言善闻"><h1>善言善闻</h1></a>
+                <ul>
+            
+            <li id="e5a608be-c89f-46f1-9ebd-93cf12d06fee">
+                <a href="n.html" >逸闻趣事</a>
+            <script>
+                var t = "true";
+                if(t=="false"){
+                    $("#e5a608be-c89f-46f1-9ebd-93cf12d06fee").find("a").attr({"href":"n.html","target":"_blank"});
+                }else{
+                    $("#e5a608be-c89f-46f1-9ebd-93cf12d06fee").find("a").attr({"href":"n.html?id=e5a608be-c89f-46f1-9ebd-93cf12d06fee"});
+                }
+            </script>
+            </li>            
+            <script>
+                if(1 != 3){
+                    if(1 == 1 ){
+                        $("#e5a608be-c89f-46f1-9ebd-93cf12d06fee").parent("ul").parent("li").find("a").attr("href","n.html?id=e5a608be-c89f-46f1-9ebd-93cf12d06fee");
+                    }
+                    $("#e5a608be-c89f-46f1-9ebd-93cf12d06fee").find("a").attr("href","n.html?id=e5a608be-c89f-46f1-9ebd-93cf12d06fee");
+                }
+            </script>
+            
+            <li id="d0c467ef-0910-4f79-9b6e-83e428e0df16">
+                <a href="n.html" >慈善言论</a>
+            <script>
+                var t = "true";
+                if(t=="false"){
+                    $("#d0c467ef-0910-4f79-9b6e-83e428e0df16").find("a").attr({"href":"n.html","target":"_blank"});
+                }else{
+                    $("#d0c467ef-0910-4f79-9b6e-83e428e0df16").find("a").attr({"href":"n.html?id=d0c467ef-0910-4f79-9b6e-83e428e0df16"});
+                }
+            </script>
+            </li>            
+            <script>
+                if(1 != 3){
+                    if(2 == 1 ){
+                        $("#d0c467ef-0910-4f79-9b6e-83e428e0df16").parent("ul").parent("li").find("a").attr("href","n.html?id=d0c467ef-0910-4f79-9b6e-83e428e0df16");
+                    }
+                    $("#d0c467ef-0910-4f79-9b6e-83e428e0df16").find("a").attr("href","n.html?id=d0c467ef-0910-4f79-9b6e-83e428e0df16");
+                }
+            </script>
+            
+            <li id="2459d7b3-c472-4e17-97d4-d511c32f0993">
+                <a href="n.html" >暖心故事</a>
+            <script>
+                var t = "true";
+                if(t=="false"){
+                    $("#2459d7b3-c472-4e17-97d4-d511c32f0993").find("a").attr({"href":"n.html","target":"_blank"});
+                }else{
+                    $("#2459d7b3-c472-4e17-97d4-d511c32f0993").find("a").attr({"href":"n.html?id=2459d7b3-c472-4e17-97d4-d511c32f0993"});
+                }
+            </script>
+            </li>            
+            <script>
+                if(1 != 3){
+                    if(3 == 1 ){
+                        $("#2459d7b3-c472-4e17-97d4-d511c32f0993").parent("ul").parent("li").find("a").attr("href","n.html?id=2459d7b3-c472-4e17-97d4-d511c32f0993");
+                    }
+                    $("#2459d7b3-c472-4e17-97d4-d511c32f0993").find("a").attr("href","n.html?id=2459d7b3-c472-4e17-97d4-d511c32f0993");
+                }
+            </script>
+            
+        </ul>
+            </li>
+            <script>
+                if(1 == 3){
+                    $("#fe4eecf7-4b04-4793-87dc-01bf669926e4").attr("href","n.html?id=fe4eecf7-4b04-4793-87dc-01bf669926e4&URLparamName=善言善闻");
+                }
+            </script>
+            
+            <li class="mainlevel flexChild"><a id="6a8de36a-6c7f-4055-8203-e9d6277cbe55" href="n.html?id=6a8de36a-6c7f-4055-8203-e9d6277cbe55&URLparamName=机构介绍"><h1>机构介绍</h1></a>
+                <ul>
+            
+            <li id="a9d777a0-ec74-4fbf-a2ea-1ed688a12d89">
+                <a href="n.html" >本会简介</a>
+            <script>
+                var t = "true";
+                if(t=="false"){
+                    $("#a9d777a0-ec74-4fbf-a2ea-1ed688a12d89").find("a").attr({"href":"n.html","target":"_blank"});
+                }else{
+                    $("#a9d777a0-ec74-4fbf-a2ea-1ed688a12d89").find("a").attr({"href":"n.html?id=a9d777a0-ec74-4fbf-a2ea-1ed688a12d89"});
+                }
+            </script>
+            </li>            
+            <script>
+                if(1 != 3){
+                    if(1 == 1 ){
+                        $("#a9d777a0-ec74-4fbf-a2ea-1ed688a12d89").parent("ul").parent("li").find("a").attr("href","n.html?id=a9d777a0-ec74-4fbf-a2ea-1ed688a12d89");
+                    }
+                    $("#a9d777a0-ec74-4fbf-a2ea-1ed688a12d89").find("a").attr("href","n.html?id=a9d777a0-ec74-4fbf-a2ea-1ed688a12d89");
+                }
+            </script>
+            
+            <li id="df9a2c3a-1b07-499b-8425-77ce3e446d73">
+                <a href="n.html" >机构章程</a>
+            <script>
+                var t = "true";
+                if(t=="false"){
+                    $("#df9a2c3a-1b07-499b-8425-77ce3e446d73").find("a").attr({"href":"n.html","target":"_blank"});
+                }else{
+                    $("#df9a2c3a-1b07-499b-8425-77ce3e446d73").find("a").attr({"href":"n.html?id=df9a2c3a-1b07-499b-8425-77ce3e446d73"});
+                }
+            </script>
+            </li>            
+            <script>
+                if(1 != 3){
+                    if(2 == 1 ){
+                        $("#df9a2c3a-1b07-499b-8425-77ce3e446d73").parent("ul").parent("li").find("a").attr("href","n.html?id=df9a2c3a-1b07-499b-8425-77ce3e446d73");
+                    }
+                    $("#df9a2c3a-1b07-499b-8425-77ce3e446d73").find("a").attr("href","n.html?id=df9a2c3a-1b07-499b-8425-77ce3e446d73");
+                }
+            </script>
+            
+            <li id="b6ef257b-5f5a-44ad-bcad-011d71048270">
+                <a href="n.html" >组织架构</a>
+            <script>
+                var t = "true";
+                if(t=="false"){
+                    $("#b6ef257b-5f5a-44ad-bcad-011d71048270").find("a").attr({"href":"n.html","target":"_blank"});
+                }else{
+                    $("#b6ef257b-5f5a-44ad-bcad-011d71048270").find("a").attr({"href":"n.html?id=b6ef257b-5f5a-44ad-bcad-011d71048270"});
+                }
+            </script>
+            </li>            
+            <script>
+                if(1 != 3){
+                    if(3 == 1 ){
+                        $("#b6ef257b-5f5a-44ad-bcad-011d71048270").parent("ul").parent("li").find("a").attr("href","n.html?id=b6ef257b-5f5a-44ad-bcad-011d71048270");
+                    }
+                    $("#b6ef257b-5f5a-44ad-bcad-011d71048270").find("a").attr("href","n.html?id=b6ef257b-5f5a-44ad-bcad-011d71048270");
+                }
+            </script>
+            
+            <li id="7eae6393-c4ef-4bd5-ae9c-51baa470f704">
+                <a href="n.html" >领导成员</a>
+            <script>
+                var t = "true";
+                if(t=="false"){
+                    $("#7eae6393-c4ef-4bd5-ae9c-51baa470f704").find("a").attr({"href":"n.html","target":"_blank"});
+                }else{
+                    $("#7eae6393-c4ef-4bd5-ae9c-51baa470f704").find("a").attr({"href":"n.html?id=7eae6393-c4ef-4bd5-ae9c-51baa470f704"});
+                }
+            </script>
+            </li>            
+            <script>
+                if(1 != 3){
+                    if(4 == 1 ){
+                        $("#7eae6393-c4ef-4bd5-ae9c-51baa470f704").parent("ul").parent("li").find("a").attr("href","n.html?id=7eae6393-c4ef-4bd5-ae9c-51baa470f704");
+                    }
+                    $("#7eae6393-c4ef-4bd5-ae9c-51baa470f704").find("a").attr("href","n.html?id=7eae6393-c4ef-4bd5-ae9c-51baa470f704");
+                }
+            </script>
+            
+            <li id="80977a9a-e7b7-4891-9ddd-5860c19a5b8e">
+                <a href="n.html" >理事成员</a>
+            <script>
+                var t = "true";
+                if(t=="false"){
+                    $("#80977a9a-e7b7-4891-9ddd-5860c19a5b8e").find("a").attr({"href":"n.html","target":"_blank"});
+                }else{
+                    $("#80977a9a-e7b7-4891-9ddd-5860c19a5b8e").find("a").attr({"href":"n.html?id=80977a9a-e7b7-4891-9ddd-5860c19a5b8e"});
+                }
+            </script>
+            </li>            
+            <script>
+                if(1 != 3){
+                    if(5 == 1 ){
+                        $("#80977a9a-e7b7-4891-9ddd-5860c19a5b8e").parent("ul").parent("li").find("a").attr("href","n.html?id=80977a9a-e7b7-4891-9ddd-5860c19a5b8e");
+                    }
+                    $("#80977a9a-e7b7-4891-9ddd-5860c19a5b8e").find("a").attr("href","n.html?id=80977a9a-e7b7-4891-9ddd-5860c19a5b8e");
+                }
+            </script>
+            
+            <li id="0b44d179-b2e3-48dc-a8e5-39d652cb328b">
+                <a href="n.html" >管理办法</a>
+            <script>
+                var t = "true";
+                if(t=="false"){
+                    $("#0b44d179-b2e3-48dc-a8e5-39d652cb328b").find("a").attr({"href":"n.html","target":"_blank"});
+                }else{
+                    $("#0b44d179-b2e3-48dc-a8e5-39d652cb328b").find("a").attr({"href":"n.html?id=0b44d179-b2e3-48dc-a8e5-39d652cb328b"});
+                }
+            </script>
+            </li>            
+            <script>
+                if(1 != 3){
+                    if(6 == 1 ){
+                        $("#0b44d179-b2e3-48dc-a8e5-39d652cb328b").parent("ul").parent("li").find("a").attr("href","n.html?id=0b44d179-b2e3-48dc-a8e5-39d652cb328b");
+                    }
+                    $("#0b44d179-b2e3-48dc-a8e5-39d652cb328b").find("a").attr("href","n.html?id=0b44d179-b2e3-48dc-a8e5-39d652cb328b");
+                }
+            </script>
+            
+            <li id="85edf5bd-c7c5-47bd-a365-ae5fbbbcb8e9">
+                <a href="n.html" >机构资质</a>
+            <script>
+                var t = "true";
+                if(t=="false"){
+                    $("#85edf5bd-c7c5-47bd-a365-ae5fbbbcb8e9").find("a").attr({"href":"n.html","target":"_blank"});
+                }else{
+                    $("#85edf5bd-c7c5-47bd-a365-ae5fbbbcb8e9").find("a").attr({"href":"n.html?id=85edf5bd-c7c5-47bd-a365-ae5fbbbcb8e9"});
+                }
+            </script>
+            </li>            
+            <script>
+                if(1 != 3){
+                    if(7 == 1 ){
+                        $("#85edf5bd-c7c5-47bd-a365-ae5fbbbcb8e9").parent("ul").parent("li").find("a").attr("href","n.html?id=85edf5bd-c7c5-47bd-a365-ae5fbbbcb8e9");
+                    }
+                    $("#85edf5bd-c7c5-47bd-a365-ae5fbbbcb8e9").find("a").attr("href","n.html?id=85edf5bd-c7c5-47bd-a365-ae5fbbbcb8e9");
+                }
+            </script>
+            
+            <li id="b1ac01ee-9503-4857-a2a7-254a530906f9">
+                <a href="n.html" >机构荣誉</a>
+            <script>
+                var t = "true";
+                if(t=="false"){
+                    $("#b1ac01ee-9503-4857-a2a7-254a530906f9").find("a").attr({"href":"n.html","target":"_blank"});
+                }else{
+                    $("#b1ac01ee-9503-4857-a2a7-254a530906f9").find("a").attr({"href":"n.html?id=b1ac01ee-9503-4857-a2a7-254a530906f9"});
+                }
+            </script>
+            </li>            
+            <script>
+                if(1 != 3){
+                    if(8 == 1 ){
+                        $("#b1ac01ee-9503-4857-a2a7-254a530906f9").parent("ul").parent("li").find("a").attr("href","n.html?id=b1ac01ee-9503-4857-a2a7-254a530906f9");
+                    }
+                    $("#b1ac01ee-9503-4857-a2a7-254a530906f9").find("a").attr("href","n.html?id=b1ac01ee-9503-4857-a2a7-254a530906f9");
+                }
+            </script>
+            
+            <li id="6eac6e08-e8bb-4872-9efa-c0a097d47943">
+                <a href="n.html" >捐赠方式</a>
+            <script>
+                var t = "true";
+                if(t=="false"){
+                    $("#6eac6e08-e8bb-4872-9efa-c0a097d47943").find("a").attr({"href":"n.html","target":"_blank"});
+                }else{
+                    $("#6eac6e08-e8bb-4872-9efa-c0a097d47943").find("a").attr({"href":"n.html?id=6eac6e08-e8bb-4872-9efa-c0a097d47943"});
+                }
+            </script>
+            </li>            
+            <script>
+                if(1 != 3){
+                    if(9 == 1 ){
+                        $("#6eac6e08-e8bb-4872-9efa-c0a097d47943").parent("ul").parent("li").find("a").attr("href","n.html?id=6eac6e08-e8bb-4872-9efa-c0a097d47943");
+                    }
+                    $("#6eac6e08-e8bb-4872-9efa-c0a097d47943").find("a").attr("href","n.html?id=6eac6e08-e8bb-4872-9efa-c0a097d47943");
+                }
+            </script>
+            
+        </ul>
+            </li>
+            <script>
+                if(1 == 3){
+                    $("#6a8de36a-6c7f-4055-8203-e9d6277cbe55").attr("href","n.html?id=6a8de36a-6c7f-4055-8203-e9d6277cbe55&URLparamName=机构介绍");
+                }
+            </script>
+            
+        </ul>
+    </div>
+</div>
+<script>
+    $(function(){
+        $(".global_ctl_showuserinfo").click(function(){
+            switchToMicro("usercenter","扫码进入个人中心","");
+        });
+    });
+</script>
+
+
+	<!--banner-->
+    <div id="myCarousel" class="carousel slide carousel-banner"  data-ride="carousel">
+        <!-- 轮播（Carousel）指标 -->
+        <ol class="carousel-indicators">
+            
+              <script type="text/javascript">
+                  $(function() {
+                   
+                      var carindex = Math.abs(1 - 1)
+                      console.log(carindex)
+                      $('#carousel-indicators1').attr('data-slide-to', carindex)
+                  })
+              </script>
+              <li data-target="#myCarousel" id="carousel-indicators1" data-slide-to="1"></li>
+              
+              <script type="text/javascript">
+                  $(function() {
+                   
+                      var carindex = Math.abs(2 - 1)
+                      console.log(carindex)
+                      $('#carousel-indicators2').attr('data-slide-to', carindex)
+                  })
+              </script>
+              <li data-target="#myCarousel" id="carousel-indicators2" data-slide-to="2"></li>
+              
+              <script type="text/javascript">
+                  $(function() {
+                   
+                      var carindex = Math.abs(3 - 1)
+                      console.log(carindex)
+                      $('#carousel-indicators3').attr('data-slide-to', carindex)
+                  })
+              </script>
+              <li data-target="#myCarousel" id="carousel-indicators3" data-slide-to="3"></li>
+              
+              <script type="text/javascript">
+                  $(function() {
+                   
+                      var carindex = Math.abs(4 - 1)
+                      console.log(carindex)
+                      $('#carousel-indicators4').attr('data-slide-to', carindex)
+                  })
+              </script>
+              <li data-target="#myCarousel" id="carousel-indicators4" data-slide-to="4"></li>
+              
+        </ol>   
+        <!-- 轮播（Carousel）项目 -->
+        <div class="carousel-inner">
+            
+            <div id="carousel-inner1" class="item">
+                <a target="_blank" href="https://www.xascsh.com/nv.html?nid=08efde2c-fca8-4b2b-88f8-aef3ff9e4a6b"><img src="https://res-img.n.gongyibao.cn/uploads/1dbdc970-d95e-45a8-859b-86e4e9abe89e/20240506/96b897d2aff44edbb2441f5de3146b68.jpg" alt="中华慈善总会效果2"></a>
+            </div>
+          
+            <div id="carousel-inner2" class="item">
+                <a target="_blank" href="https://www.xascsh.com/nv.html?nid=cfb47c5a-2bcc-4632-b8f6-53ea7db33c7f"><img src="https://res-img.n.gongyibao.cn/uploads/1dbdc970-d95e-45a8-859b-86e4e9abe89e/20240513/78847e56c52f40a4b989520df41f024a.jpg" alt="换届大会效果图"></a>
+            </div>
+          
+            <div id="carousel-inner3" class="item">
+                <a target="_blank" href="https://www.xascsh.com/nv.html?nid=1029806b-bfe8-412e-a8f2-0da965a0b2c0"><img src="https://res-img.n.gongyibao.cn/uploads/1dbdc970-d95e-45a8-859b-86e4e9abe89e/20240513/b815e1ff481d4bd4beed022c157e7f95.jpg" alt="“慈善幸福家园工程 ”观摩推进会效果图"></a>
+            </div>
+          
+            <div id="carousel-inner4" class="item">
+                <a target="_blank" href="https://www.xascsh.com/nv.html?nid=92c4e9b5-9302-4a01-b158-1816b4b5ae9b"><img src="https://res-img.n.gongyibao.cn/uploads/1dbdc970-d95e-45a8-859b-86e4e9abe89e/20240513/1057f46f80dc4d0b851c0c56f412bb3f.jpg" alt="老挝活动效果图"></a>
+            </div>
+          
+        </div>
+        <!-- 轮播（Carousel）导航 -->
+        <div class="leftRight">
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev"></a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next"></a>
+        </div>
+        <script>
+                $("#carousel-indicators1").addClass("active");
+                $("#carousel-inner1").addClass("active");
+                document.getElementsByTagName("title")[0].innerText ='西安市慈善会';	
+              </script>
+    </div> 
+<div class="bgGray">
+    <div class="bgGrayBox">
+        <!--总会公告-->
+        <div class="noticeBox layout">
+            <h2 class="noticeH2"><a href="javascript:;"></a></h2>
+            <div class="NewList">
+                <ul>
+                    
+                    <li><a href="nv.html?nid=fe285547-7c33-458f-a650-dce9286a5c88">西安市慈善会郑重声明...</a></li>
+                    
+                    <li><a href="nv.html?nid=86a27316-7c4f-48e1-8498-f8f1f24375f4">西安市慈善会简介...</a></li>
+                    
+                    <li><a href="nv.html?nid=a2b6b819-2977-4579-8c32-193f738daf52">身边的慈善风采 8 | 三年公益路，红太阳暖长安：一支志愿队的深耕与坚守...</a></li>
+                    
+                    <li><a href="nv.html?nid=f80984a1-5a1c-4922-9bd3-e131b075cb93">慈善帮扶解难忧，锦旗回馈话初心...</a></li>
+                            
+                </ul>
+            </div>
+            <div class="wrap-info">
+                <div class="main-content layout">
+                    <div class=" info-icon layout">
+                        <ul>
+                            <li class="col-lg-4 col-md-4">
+                                <div class="dateTxtBox">
+                                    <span class="infor-icon infor-1"></span>
+                                    <div class="infoTxt layout">
+                                        <div class="infor-num">  <h2 id="myTargetElement1" class="red"><span id="sum_amount">0</span></h2></div>
+                                        <p>截止<span id="year1"></span>年<span id="month1"></span>月<span id="day1"></span>日募捐总额</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="col-lg-4 col-md-4">
+                                <div class="dateTxtBox">
+                                    <span class="infor-icon infor-2"></span>
+                                    <div class="infoTxt layout">
+                                        <div class="infor-num"> <h2 id="myTargetElement2" class="red"><span id="payout_amount">0</span></h2></div>
+                                        <p>截止<span id="year2"></span>年<span id="month2"></span>月<span id="day2"></span>日拨付总额</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="col-lg-4 col-md-4">
+                                <div class="dateTxtBox">
+                                    <span class="infor-icon infor-3"></span>
+                                    <div class="infoTxt layout">
+                                        <div class="infor-num"><h2 id="pay_usercount" class="red">0</h2></div>
+                                        <p>截止<span id="year3"></span>年<span id="month3"></span>月<span id="day3"></span>日捐赠人次</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--news-->
+        <div class="newBar marT20 clearfix">
+            <div class="titleBar marT20">
+                <h3 class="product-title product-news pr">
+                    慈善新闻<span class="product-title-line pa"></span>
+                    <span class="product-title-br pa"></span>
+                </h3>
+            </div>
+            <div class="box marT20 clearfix">
+                <div class="newsBar">
+                    <div class="titdiv clearfix">
+                        <ul>
+                            <li class="onli"><a href="javascript:;" target="_blank" onclick="return false;" class="">慈善资讯</a>
+                            </li>
+                            
+                            <li class=""><a href="javascript:;" target="_blank" onclick="return false;" class="">媒体报道</a></li>
+                            
+                            
+                            <li class=""><a href="javascript:;" target="_blank" onclick="return false;" class="">区县动态</a></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="condiv clearfix">
+                        <div class=" ondiv subdiv tab1" style="display: block;">
+                            <div class="tab1 ">
+                                <ul class="clearfix">
+                                    
+                                    <li>
+                                        <div class="imgLeft pr"><a href="nv.html?nid=fe285547-7c33-458f-a650-dce9286a5c88"><img src="https://res-img.n.gongyibao.cn/uploads/1dbdc970-d95e-45a8-859b-86e4e9abe89e/20220408/980dfe46b98547a8bf8fde737db6d97a.jpg"/></a>
+                                        </div>
+                                        <div class="textBar">
+                                            <h2><a href="nv.html?nid=fe285547-7c33-458f-a650-dce9286a5c88">西安市慈善会郑重声明</a></h2>
+                                            <div class="detailTime">2022-04-08<span>来源：本站</span></div>
+                                            <div class="detailBar1">本会在这里郑重提示，凡在本会互联网平台或利用本会财务号诱导捐款者刷单、下载第三方软件等捐款，都属欺骗行为。请广大捐款者谨防上当受骗，不让不法分子有机可乘。   如您在转账捐赠后发现遭遇诈骗或属于未成年...</div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li>
+                                        <div class="imgLeft pr"><a href="nv.html?nid=f80984a1-5a1c-4922-9bd3-e131b075cb93"><img src="https://res-img.n.gongyibao.cn/uploads/1dbdc970-d95e-45a8-859b-86e4e9abe89e/20251231/bbee9305ab4340a7862793bc3a4f53f9.jpg"/></a>
+                                        </div>
+                                        <div class="textBar">
+                                            <h2><a href="nv.html?nid=f80984a1-5a1c-4922-9bd3-e131b075cb93">慈善帮扶解难忧，锦旗回馈话初心</a></h2>
+                                            <div class="detailTime">2025-12-31<span>来源：本站</span></div>
+                                            <div class="detailBar1">一面承载着感恩之情的锦旗被郑重递上，一群特殊的访客——困难群众代表、志愿者代表齐聚于西安慈善慈善会，用最朴实的话语和最真挚的情感表示着深深的谢意。12月30日，市慈善会的会议室里暖意融融，会长朱智生，...</div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li>
+                                        <div class="imgLeft pr"><a href="nv.html?nid=11e74384-61ef-4273-b105-9e668e6c0584"><img src="https://res-img.n.gongyibao.cn/uploads/1dbdc970-d95e-45a8-859b-86e4e9abe89e/20251222/30e4bc918fd44dd5a8bc3ae87a7588ce.jpg"/></a>
+                                        </div>
+                                        <div class="textBar">
+                                            <h2><a href="nv.html?nid=11e74384-61ef-4273-b105-9e668e6c0584">暖聚初心迎冬至 慈善同心聚情长</a></h2>
+                                            <div class="detailTime">2025-12-22<span>来源：本站</span></div>
+                                            <div class="detailBar1">冬至阳生，岁寒情暖。在冬至即将来临之际，为传承弘扬中华优秀传统文化，进一步增强团队凝聚力与向心力，12月19日中午，西安市慈善会组织全体职工开展“党旗领航、工会暖心、慈善聚力、饺香传情”主题活动。会长...</div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li>
+                                        <div class="imgLeft pr"><a href="nv.html?nid=a05cb882-34a2-4968-bed7-f9b0ced0605d"><img src="https://res-img.n.gongyibao.cn/uploads/1dbdc970-d95e-45a8-859b-86e4e9abe89e/20251219/48d29bebb59240d8bcc7b8e31500bb82.jpg"/></a>
+                                        </div>
+                                        <div class="textBar">
+                                            <h2><a href="nv.html?nid=a05cb882-34a2-4968-bed7-f9b0ced0605d">暖冬送关怀，运动传希望</a></h2>
+                                            <div class="detailTime">2025-12-19<span>来源：本站</span></div>
+                                            <div class="detailBar1">冬日的暖阳洒满校园，温情的关怀浸润心田。12月17日，西安市慈善会前往未央区特殊教育学校，为孩子们送去了足球、篮球、排球等一批体育用品。这份温暖的礼物不仅丰富了学校的体育教学资源，更传递了社会对特殊儿...</div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li>
+                                        <div class="imgLeft pr"><a href="nv.html?nid=277f5a1b-9f7b-4b37-903d-23e9ad5ede46"><img src="https://res-img.n.gongyibao.cn/uploads/1dbdc970-d95e-45a8-859b-86e4e9abe89e/20251211/002e2656e9074e1d903347915030f413.jpg"/></a>
+                                        </div>
+                                        <div class="textBar">
+                                            <h2><a href="nv.html?nid=277f5a1b-9f7b-4b37-903d-23e9ad5ede46">爱心物资防流感 助老爱老显真情</a></h2>
+                                            <div class="detailTime">2025-12-11<span>来源：本站</span></div>
+                                            <div class="detailBar1">寒冬送暖，情系桑榆。12月10日上午，碑林区第三爱心护理院内处处洋溢着温情暖意，“爱心物资防流感・助老爱老显真情”主题捐赠活动在此温情启幕。此次活动由西安市慈善会牵头，联合碑林区民政局、碑林区慈善会，...</div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li>
+                                        <div class="imgLeft pr"><a href="nv.html?nid=3d2e39e9-2289-4ee9-80df-924dc93938d4"><img src="https://res-img.n.gongyibao.cn/uploads/1dbdc970-d95e-45a8-859b-86e4e9abe89e/20251206/b1f38eb44c1142d58f247b359831f513.jpg"/></a>
+                                        </div>
+                                        <div class="textBar">
+                                            <h2><a href="nv.html?nid=3d2e39e9-2289-4ee9-80df-924dc93938d4">商洛市慈善协会一行到西安市慈善会交流学习</a></h2>
+                                            <div class="detailTime">2025-12-06<span>来源：本站</span></div>
+                                            <div class="detailBar1">秦岭文脉滋养的商洛，与关中沃土孕育的西安，虽隔山水却心手相连，慈善正是联结两地温情的重要纽带。12月4日，商洛市慈善协会会长李选良带队，常务副会长陈知武，副会长郭兴成、郭万宝，秘书长刘建斌等一行7人到...</div>
+                                        </div>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                            <div class="btnMore">
+                                
+                                <a href="n.html?id=22b08250-06fd-41d8-8416-48a94bd03c26">查看更多>></a>
+                                
+                            </div>
+                        </div>
+                        <div class="subdiv" style="display: none;">
+                            <div class="tab1 ">
+                                <ul class="clearfix">
+                                    
+                                    <li>
+                                        <div class="dateBar">
+                                            <div class="daytxt">31</div>
+                                            <div class="yearTxt">2025-12</div>
+                                        </div>
+                                        <div class="textBar">
+                                            <h2><a href="nv.html?nid=6c8ee8d3-a2c4-4fc1-b372-9db90ade30be">在规范发展中持续释放温暖而坚实的力量——2025年慈善事业发展综述</a></h2>
+                                            <div class="detailBar">岁序更替，华章日新。回望2025年，慈善事业在法治化轨道上稳健前行，在创新变革中迸发活力，在促进共同富裕的道路上彰显独特价值，呈现出蓬勃生机与崭新气象。这一年，慈善力量如涓涓细流汇成江海，不仅于扶危济...
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li>
+                                        <div class="dateBar">
+                                            <div class="daytxt">15</div>
+                                            <div class="yearTxt">2025-12</div>
+                                        </div>
+                                        <div class="textBar">
+                                            <h2><a href="nv.html?nid=7cd80141-e284-4dca-9693-537ae8c6e8f7">2025年中国公益慈善项目交流展示会在穗开幕</a></h2>
+                                            <div class="detailBar">12月12日，2025年中国公益慈善项目交流展示会（以下简称慈展会）在广州开幕。本届慈展会深入贯彻落实党的二十届四中全会精神，主题为“人人慈善、助力民生”。中国慈善联合会会长张春生，民政部慈善事业促进...
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li>
+                                        <div class="dateBar">
+                                            <div class="daytxt">15</div>
+                                            <div class="yearTxt">2025-12</div>
+                                        </div>
+                                        <div class="textBar">
+                                            <h2><a href="nv.html?nid=8cc9780e-61ca-40dd-ad43-f368828ae80a">全国政协常委、中华慈善总会会长唐承沛：以规范化促进慈善事业发展根基更稳、韧性更强</a></h2>
+                                            <div class="detailBar">“慈善事业是党领导下的崇高事业，要锚定‘十五五’承前启后、递进发展的重要时机，自觉融入中国式现代化建设全过程各方面，推动公益慈善事业进一步固本夯基、全面发展，在强国建设、民族复兴伟业中展现应有担当。”...
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li>
+                                        <div class="dateBar">
+                                            <div class="daytxt">01</div>
+                                            <div class="yearTxt">2025-12</div>
+                                        </div>
+                                        <div class="textBar">
+                                            <h2><a href="nv.html?nid=ada2eca2-c862-4d71-8a12-e3018919cddf">习近平致中国志愿服务联合会第三届会员代表大会的贺信</a></h2>
+                                            <div class="detailBar">点击此处跳转查看...
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li>
+                                        <div class="dateBar">
+                                            <div class="daytxt">20</div>
+                                            <div class="yearTxt">2025-10</div>
+                                        </div>
+                                        <div class="textBar">
+                                            <h2><a href="nv.html?nid=d85c2a95-302e-4ac8-a910-5165951a7a39">民政部党组书记、部长陆治原：在法治轨道上推进慈善事业高质量发展</a></h2>
+                                            <div class="detailBar">点击此处跳转查看...
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li>
+                                        <div class="dateBar">
+                                            <div class="daytxt">11</div>
+                                            <div class="yearTxt">2025-10</div>
+                                        </div>
+                                        <div class="textBar">
+                                            <h2><a href="nv.html?nid=7bc0c413-c8fe-4c22-87f8-3663302ec616">全国登记认定慈善组织1.6万余家、备案慈善信托2570单 | “十四五”时期民政事业发展成就</a></h2>
+                                            <div class="detailBar">10日上午，国务院新闻办举行“高质量完成‘十四五’规划”系列主题新闻发布会，介绍“十四五”时期民政事业发展成就，民政部部长陆治原、副部长李常官、副部长胡海峰、副部长刘振国出席发布会并答记者问。李常官介...
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                            <div class="btnMore">
+                                
+                                <a href="n.html?id=ca337931-34dd-4ec2-8b7c-c12851ccaefe">查看更多>></a>
+                                
+                            </div>
+                        </div>
+                        <div class="subdiv" style="display: none;">
+                            <div class="tab2 clearfix">
+                                <ul class="clearfix">
+                                    
+                                    <li>
+                                        <div class="videoBar"><a href="nv.html?nid=6c6d2f0d-a9d5-452d-b7bc-701147a6d8c6"><img src="https://res-img.n.gongyibao.cn/uploads/1dbdc970-d95e-45a8-859b-86e4e9abe89e/20251230/7f6a17fe532a40dd804e364e25b9586a.jpg"/> </a></div>
+                                        <div class="videoTit"><a href="nv.html?nid=6c6d2f0d-a9d5-452d-b7bc-701147a6d8c6">区县动态（二十五）</a></div>
+                                    </li>
+                                    
+                                    <li>
+                                        <div class="videoBar"><a href="nv.html?nid=2378cdc6-2553-4fdf-8f2f-5df36d50d3f1"><img src="https://res-img.n.gongyibao.cn/uploads/1dbdc970-d95e-45a8-859b-86e4e9abe89e/20251223/ce5ba4dd7a194ffb9071e871a6bc84ef.jpg"/> </a></div>
+                                        <div class="videoTit"><a href="nv.html?nid=2378cdc6-2553-4fdf-8f2f-5df36d50d3f1">区县动态（二十四）</a></div>
+                                    </li>
+                                    
+                                    <li>
+                                        <div class="videoBar"><a href="nv.html?nid=665224d9-94e2-4c6a-ba90-c52f1d3d4172"><img src="https://res-img.n.gongyibao.cn/uploads/1dbdc970-d95e-45a8-859b-86e4e9abe89e/20251218/b31b9b11cb964e50b81fe117fb70fad7.jpg"/> </a></div>
+                                        <div class="videoTit"><a href="nv.html?nid=665224d9-94e2-4c6a-ba90-c52f1d3d4172">区县动态（二十三）</a></div>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                            <div class="btnMore">
+                                
+                                <a href="n.html?id=402756de-333f-4452-9285-dff0abab59b4">查看更多>></a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--慈善项目-->
+        <div class="projectBar">
+            <div class="titleBar marT20">
+                <h3 class="product-title product-projects pr">
+                    慈善项目<span class="product-title-line pa"></span>
+                    <span class="product-title-br pa"></span>
+                </h3>
+                <a href="p.html" class="btnMore">查看更多>></a>
+            </div>
+            <div class="box  clearfix">
+                <div class="projectUl marT20 clearfix">
+                    <ul class="clearfix frUl">
+                        
+                        <li class="item6">
+                            <div class="itemImg">
+                                <a href="pv.html?id=f4b47604-921a-4732-bf38-cdeffcda34c6"><img src="https://res-img.n.gongyibao.cn/uploads/1dbdc970-d95e-45a8-859b-86e4e9abe89e/20250729/9d480553f96d4f50acf0283f0e4f5d04.png" width="282" height="177"/></a>
+                            </div>
+                            <div class="itemCon">
+                                <h2><a href="pv.html?id=f4b47604-921a-4732-bf38-cdeffcda34c6">致敬英雄，爱心传递--为见义勇为英雄李静毅家庭募捐倡议书</a></h2>
+                                <p>2025年7月25日，在西安市高陵区泾河工业园区附近的渭河边，一名儿童不慎落水，34岁的李静毅游向落水儿童将其托出水面。却因体力耗尽，英勇牺牲。我们呼吁全市爱心企业、社会各界人士伸出援手，汇聚爱心暖流，给予这个英雄家庭最及时、最有力的支持。</p>
+                                
+                                <div class="itemBtn">
+                                    <a href="javascript:void(0);" class="btnBar btnDona donaOk donaOk401" style="display: none" onclick="DonationConfirm('573fb981-a440-4aee-8cce-8bb57e2e3f17','f4b47604-921a-4732-bf38-cdeffcda34c6','')">我要捐款</a>
+                                    <a href="javascript:void(0);" class="btnBar btnDona donaTime donaStart401" style="display: none">未开始</a>
+                                    <a href="javascript:void(0);" class="btnBar btnDona donaStop40" style="display: none" >已结束</a>
+                                </div>
+                                
+                            </div>                            
+                        </li>
+                        
+                        <li class="item6">
+                            <div class="itemImg">
+                                <a href="pv.html?id=9f227216-6ef6-46aa-a828-890f6fb3a701"><img src="https://res-img.n.gongyibao.cn/uploads/1dbdc970-d95e-45a8-859b-86e4e9abe89e/20250908/1febd1ac850c46e991f0350690645df4.png" width="282" height="177"/></a>
+                            </div>
+                            <div class="itemCon">
+                                <h2><a href="pv.html?id=9f227216-6ef6-46aa-a828-890f6fb3a701">“中华慈善日”慈善市集义卖活动</a></h2>
+                                <p>在每个社区，集中开展为期一天的“慈善服务日”，并围绕核心需求，再开展5场不同主题的专场服务</p>
+                                
+                                <div class="itemBtn">
+                                    <a href="javascript:void(0);" class="btnBar btnDona donaOk donaOk401" style="display: none" onclick="DonationConfirm('e0cec5d1-2114-4d77-a2ee-50057da7591e','9f227216-6ef6-46aa-a828-890f6fb3a701','')">我要捐款</a>
+                                    <a href="javascript:void(0);" class="btnBar btnDona donaTime donaStart401" style="display: none">未开始</a>
+                                    <a href="javascript:void(0);" class="btnBar btnDona donaStop40" style="display: none" >已结束</a>
+                                </div>
+                                
+                            </div>                            
+                        </li>
+                        
+                        <li class="item6">
+                            <div class="itemImg">
+                                <a href="pv.html?id=0e7db95f-e858-4d38-b2a8-541ebdcd99d0"><img src="https://res-img.n.gongyibao.cn/uploads/1dbdc970-d95e-45a8-859b-86e4e9abe89e/20250523/6f8abb947231457f86d4e886a2596a4c.png" width="282" height="177"/></a>
+                            </div>
+                            <div class="itemCon">
+                                <h2><a href="pv.html?id=0e7db95f-e858-4d38-b2a8-541ebdcd99d0">爱心同行盛夏送凉</a></h2>
+                                <p>为弱困群体、困难家庭、户外一线工作者提供必需生活物资，保障其基本生存需求；通过物资援助传递社会关爱。</p>
+                                
+                                <div class="itemBtn">
+                                    <a href="javascript:void(0);" class="btnBar btnDona donaOk donaOk401" style="display: none" onclick="DonationConfirm('0034fb1f-87f1-4024-ab64-3d1d2926f6b8','0e7db95f-e858-4d38-b2a8-541ebdcd99d0','')">我要捐款</a>
+                                    <a href="javascript:void(0);" class="btnBar btnDona donaTime donaStart401" style="display: none">未开始</a>
+                                    <a href="javascript:void(0);" class="btnBar btnDona donaStop40" style="display: none" >已结束</a>
+                                </div>
+                                
+                            </div>                            
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--基金-->
+        <div class="clearfix marT20">
+            <div class="titleBar marT20">
+                <h3 class="product-title product-funds pr">
+                    公益基金<span class="product-title-line pa"></span>
+                    <span class="product-title-br pa"></span>
+                </h3>
+                <a href="f.html" class="btnMore">查看更多>></a>
+            </div>
+            <div class="box">
+                <div class="funBar">
+                    <ul class="clearfix">
+                        
+                        <li class="pr">             
+                            <div class="funBarBox">
+                                <div class="funImg"><a href="fv.html?id=1cd1df6c-0be1-4d86-a746-06c16d02a30d"><img src="https://res-img.n.gongyibao.cn/uploads/1dbdc970-d95e-45a8-859b-86e4e9abe89e/20250606/33a1626634174024b51ab538dd0eb0d2.png"/></a></div>
+                                <div class="funTextBox">
+                                    <h4><a href="fv.html?id=1cd1df6c-0be1-4d86-a746-06c16d02a30d">西安慈善“心的世界新的你”锦天光明公益基金</a></h4>
+                                    <div class="funDateil">
+                                        <p>冠名人：西安市慈善会</p>
+                                        <p>已捐善款：<span>￥56413.48</span>元</p>
+                                    </div>
+                                    <div class="funBtn">
+                                        
+                                        <a href="javascript:void(0);" class="btnBar btnDona fundOk fundOk301" style="display: none" onclick="DonationConfirm('5d0d0bbf-ea55-4d32-9b26-8e35116edd63','1cd1df6c-0be1-4d86-a746-06c16d02a30d','')">立即捐款</a>
+                                        
+                                        <a href="javascript:void(0);" class="btnBar btnDona fundTime fundStart301" style="display: none">未开始</a>
+                                        <a href="javascript:void(0);" class="btnBar btnDona fundStop30" style="display: none" >已结束</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li class="pr">             
+                            <div class="funBarBox">
+                                <div class="funImg"><a href="fv.html?id=fed3e209-2c3c-47f4-a0c4-d10361feb36d"><img src="https://res-img.n.gongyibao.cn/uploads/1dbdc970-d95e-45a8-859b-86e4e9abe89e/20250522/573b2a07945b488996097886de19e94f.png"/></a></div>
+                                <div class="funTextBox">
+                                    <h4><a href="fv.html?id=fed3e209-2c3c-47f4-a0c4-d10361feb36d">西安慈善新型建筑行业协会志愿者服务队微基金</a></h4>
+                                    <div class="funDateil">
+                                        <p>冠名人：西安市慈善会</p>
+                                        <p>已捐善款：<span>￥21932.00</span>元</p>
+                                    </div>
+                                    <div class="funBtn">
+                                        
+                                        <a href="javascript:void(0);" class="btnBar btnDona fundOk fundOk301" style="display: none" onclick="DonationConfirm('dc4578c3-72b3-4a0b-a8cb-44e457d5c14b','fed3e209-2c3c-47f4-a0c4-d10361feb36d','')">立即捐款</a>
+                                        
+                                        <a href="javascript:void(0);" class="btnBar btnDona fundTime fundStart301" style="display: none">未开始</a>
+                                        <a href="javascript:void(0);" class="btnBar btnDona fundStop30" style="display: none" >已结束</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li class="pr">             
+                            <div class="funBarBox">
+                                <div class="funImg"><a href="fv.html?id=f226af14-188a-4ce3-b628-41a0eb881756"><img src="https://res-img.n.gongyibao.cn/uploads/1dbdc970-d95e-45a8-859b-86e4e9abe89e/20250514/ad94db5948454ad4a82a435f552a9bad.png"/></a></div>
+                                <div class="funTextBox">
+                                    <h4><a href="fv.html?id=f226af14-188a-4ce3-b628-41a0eb881756">西安慈善宠之谷志愿者服务队微基金</a></h4>
+                                    <div class="funDateil">
+                                        <p>冠名人：西安市慈善会</p>
+                                        <p>已捐善款：<span>￥46.00</span>元</p>
+                                    </div>
+                                    <div class="funBtn">
+                                        
+                                        <a href="javascript:void(0);" class="btnBar btnDona fundOk fundOk301" style="display: none" onclick="DonationConfirm('f9871d44-386f-4112-bc8d-75b26d662f15','f226af14-188a-4ce3-b628-41a0eb881756','')">立即捐款</a>
+                                        
+                                        <a href="javascript:void(0);" class="btnBar btnDona fundTime fundStart301" style="display: none">未开始</a>
+                                        <a href="javascript:void(0);" class="btnBar btnDona fundStop30" style="display: none" >已结束</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li class="pr">             
+                            <div class="funBarBox">
+                                <div class="funImg"><a href="fv.html?id=d0f4e6a7-0a79-47a0-bee6-165391be8b2f"><img src="https://res-img.n.gongyibao.cn/uploads/1dbdc970-d95e-45a8-859b-86e4e9abe89e/20250320/36672249cd89485cb5043ece7f77fb87.png"/></a></div>
+                                <div class="funTextBox">
+                                    <h4><a href="fv.html?id=d0f4e6a7-0a79-47a0-bee6-165391be8b2f">西安慈善陕西中援应急救援志愿者服务队微基金</a></h4>
+                                    <div class="funDateil">
+                                        <p>冠名人：西安市慈善会</p>
+                                        <p>已捐善款：<span>￥882.00</span>元</p>
+                                    </div>
+                                    <div class="funBtn">
+                                        
+                                        <a href="javascript:void(0);" class="btnBar btnDona fundOk fundOk301" style="display: none" onclick="DonationConfirm('02c6691b-63c5-4dcc-9de9-8b3a5f3ee405','d0f4e6a7-0a79-47a0-bee6-165391be8b2f','')">立即捐款</a>
+                                        
+                                        <a href="javascript:void(0);" class="btnBar btnDona fundTime fundStart301" style="display: none">未开始</a>
+                                        <a href="javascript:void(0);" class="btnBar btnDona fundStop30" style="display: none" >已结束</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                                  
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!--捐赠信息-->
+        <div class="listBar">
+            <div class="box">
+                <div class="listBox clearfix">
+                    <div class="listContent">
+                        <div class="listTitBar">
+                            <h2>爱心榜单</h2>
+                        </div>
+                        <div class="rankList">
+                            <div id="container" style="height: 340px;"></div>
+                            <div class="rankBtn"><a href="l.html">查看更多</a></div>
+                        </div>
+                    </div>
+                    <div class="listContent">
+                        <div class="listTitBar">
+                            <h2>捐赠信息</h2>
+                        </div>
+                        <div class="rankList">
+                            <div style="height: 340px;">
+                                <h4 class="DTitle"><span class="DName">日期</span><span class="Dmounch">捐赠人</span><span class="Dproject">金额</span><span class="Dother">备注</span></h4>
+                                <div class="LoveData layout">
+                                    <ul id="container1">
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="rankBtn"><a href="g.html?type=10">查看更多</a></div>
+                        </div>
+                    </div>
+                    <div class="listContent">
+                        <div class="listTitBar">
+                            <h2>救助信息</h2>
+                        </div>
+                        <div class="rankList">
+                           <div id="container2" style="height: 340px;"></div>
+                            <div class="rankBtn"><a href="g.html?type=50">查看更多</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--志愿者动态-->
+		<div class="fundWrap layout">
+			<div class="wrap padBot20  layout">
+				<div class="fund fl">
+                    
+					<div class="title">
+						<a href="n.html?id=e987c155-f9c7-42d7-9e2c-20adbb543ba6"><span>慈善志愿者动态</span><i>更多</i></a>
+					</div>
+                    
+					<ul>
+						
+						<li>
+                            <a href="nv.html?nid=a2b6b819-2977-4579-8c32-193f738daf52">
+                                <span class="text">身边的慈善风采 8 | 三年公益路，红太阳暖长安：一支志愿队的深耕与坚守</span>
+                                <span class="time">01-04</span>
+                            </a>
+                        </li>
+						
+						<li>
+                            <a href="nv.html?nid=9adb7c5c-ad17-43c7-9ca3-474fa1526f29">
+                                <span class="text">志愿者活动集锦（三十五）</span>
+                                <span class="time">12-29</span>
+                            </a>
+                        </li>
+						
+						<li>
+                            <a href="nv.html?nid=8f9427a4-c291-4be1-a1bc-557ab8ed9b59">
+                                <span class="text">志愿者活动集锦（三十四）</span>
+                                <span class="time">12-22</span>
+                            </a>
+                        </li>
+						
+						<li>
+                            <a href="nv.html?nid=13dc2f57-8970-475a-98c8-a9e2e4f8db50">
+                                <span class="text">志愿者活动集锦（三十三）</span>
+                                <span class="time">12-15</span>
+                            </a>
+                        </li>
+						
+						<li>
+                            <a href="nv.html?nid=1861fb73-2089-4f58-8861-7276e91306e4">
+                                <span class="text">志愿者活动集锦（三十二）</span>
+                                <span class="time">12-06</span>
+                            </a>
+                        </li>
+						
+						<li>
+                            <a href="nv.html?nid=89ceefd7-1603-49ef-96e8-a9ba882cfb74">
+                                <span class="text">身边的慈善风采 7 | 西安慈善抱抱义工志愿者服务队：9年坚守，点亮贫困学子希望之光</span>
+                                <span class="time">12-05</span>
+                            </a>
+                        </li>
+						
+					</ul>			
+				</div>
+				<div class="fund fr">				
+					
+					<div class="title">
+						<a href="n.html?id=c75e41a4-6a05-4e4b-821e-f0b6eb1f212b"><span>慈善季刊</span><i>更多</i></a>
+					</div>
+                    
+					<ul>
+						
+						<li>
+                            <a href="nv.html?nid=7408b277-4e2b-4155-a3d6-d8ce3f9a88eb">
+                                <span class="text">西安慈善2025年第一期</span>
+                                <span class="time">04-23</span>
+                            </a>
+                        </li>
+						
+						<li>
+                            <a href="nv.html?nid=93587c85-a514-4067-9b3a-e8bc8785cbe3">
+                                <span class="text">西安慈善2024年第四期</span>
+                                <span class="time">04-23</span>
+                            </a>
+                        </li>
+						
+						<li>
+                            <a href="nv.html?nid=0942241a-b6c8-401b-9509-472bdde73363">
+                                <span class="text">西安慈善2024年第三期</span>
+                                <span class="time">04-23</span>
+                            </a>
+                        </li>
+						
+						<li>
+                            <a href="nv.html?nid=53c1a0d9-e55d-40d2-b003-ac2b5e10ab2b">
+                                <span class="text">西安慈善2024年第二期</span>
+                                <span class="time">04-23</span>
+                            </a>
+                        </li>
+						
+						<li>
+                            <a href="nv.html?nid=251e0800-1b08-481b-bdcd-87838a035371">
+                                <span class="text">西安慈善2024年第一期</span>
+                                <span class="time">05-10</span>
+                            </a>
+                        </li>
+						
+						<li>
+                            <a href="nv.html?nid=613c41c9-e775-4dd0-a25c-7b37780d754e">
+                                <span class="text">西安慈善2023年第四期</span>
+                                <span class="time">05-10</span>
+                            </a>
+                        </li>
+						
+					</ul>					
+				</div>
+			</div>
+		</div>
+        <!--数据-->
+        <!-- <div class="dataBar ">
+            <div class="box ">
+                <div class="dataContent clearfix">
+                    <div class="dataBox">
+                        <div class="dataIcon"><img src="static/default/static/images/cmpIcon1.png"/></div>
+                        <div class="dataNum">
+                            <p>历史捐赠总额</p>
+                            <div class="dataAmount"><span class="bigFonte" style="color:#f48d23;" id="sum_amount">￥0</span>元</div>
+                        </div>
+                        <div class="dataBtn"><a href="p.html">我要捐赠</a></div>
+                    </div>
+                    <div class="dataBox">
+                        <div class="dataIcon"><img src="static/default/static/images/cmpIcon2.png"/></div>
+                        <div class="dataNum">
+                            <p>历史拨付总额</p>
+                            <div class="dataAmount"><span class="bigFonte" style="color:#fc4936;" id="payout_amount">￥0</span>元</div>
+                        </div>
+                        <div class="dataBtn"><a href="h.html">我要救助</a></div>
+                    </div>
+                    <div class="dataBox">
+                        <div class="dataIcon"><img src="static/default/static/images/cmpIcon3.png"/></div>
+                        <div class="dataNum">
+                            <p>公益基金个数</p>
+                            <div class="dataAmount"><span class="bigFonte" id="fundCount" style="color:#13c65e;">0</span>个</div>
+                        </div>
+                        <div class="dataBtn"><a href="f.html">更多公益基金</a></div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </div>
+</div>
+<div id="top">
+    <div id="izl_rmenu" class="izl-rmenu">
+        <div class="izl_top">
+            <div class="btnRight btn-phone">
+                <a href="javascript:;">联系方式</a>
+                <div class="ptxt">
+                    
+                    <p>咨询电话：</p>
+                    <p class="mb10">029-88868053</p>
+                    
+                    <p>网络筹款：</p>
+                    <p class="mb10">029-88443165</p>
+                    
+                    <!-- <p>咨询电话：</p>
+                    <p class="mb10">029-88868053</p>
+                    <p>网络筹款：</p>
+                    <p>029-88443165</p> -->
+                </div>
+            </div>
+            <div class="btnRight btn-jz">
+                <a href="javascript:window.location.href='p.html'">我要捐赠</a>
+            </div>
+            <!-- <div class="btnRight askHelp">
+                <a href="javascript:;">个人求助</a>
+            </div>
+            <div class="btnRight">
+                <a href="javascript:window.location.href='h.html'">我要救助</a>
+            </div> -->
+            <div class="btnRight btn-code">
+                <a href="javascript:;">扫码捐赠</a>
+                <div class="pic">
+                  <p>微信/支付宝扫码捐款</p>
+                  
+                  <img class="picImg" src="https://res-img.n.gongyibao.cn/uploads/1dbdc970-d95e-45a8-859b-86e4e9abe89e/20210705/7f66d0e8ac434349a5cde781168b8b43.png" alt="" onclick="window.location"/>           
+                     
+                  <!-- <img class="picImg" src="https://res-img.n.gongyibao.cn/uploads/1dbdc970-d95e-45a8-859b-86e4e9abe89e/20210825/248ac00189d845b09a8470fd7cf8e806.png" onclick="window.location"/> -->
+              </div>
+            </div>
+            <div class="btnRight btn-wx">
+                <a href="javascript:;">微信公众号</a>
+                <div class="pic">
+                    <p>扫码关注官方微信</p>
+                    <img class="picImg" src="https://res-img.n.gongyibao.cn/uploads/1dbdc970-d95e-45a8-859b-86e4e9abe89e/20210825/248ac00189d845b09a8470fd7cf8e806.png" onclick="window.location"/>
+                </div>
+            </div>
+            <div class="btnRight btn-wb">
+                <a target="_blank" href="https://weibo.com/u/7005785145?is_all=1">官方微博</a>
+            </div>
+            <div class="btnRight btn-top">
+                <a href="javascript:;">回到顶部</a>
+            </div>
+        </div>
+    </div>
+</div>  
+<!--友情链接 s-->
+<div class="linkBar">
+    <div class="box">
+        <div class="linkTitle">
+            <h3>友情链接</h3>
+        </div>
+        <div class="Link-list layout">
+            <div class="tabBar">
+                <ul>
+                    <li> 
+    					
+    					<a href="http://www.chinacharityfederation.org/index.html" target="_blank"><img src="https://res-img.n.gongyibao.cn/uploads/1dbdc970-d95e-45a8-859b-86e4e9abe89e/20190722/ec8630fc612b4930a48bae9dc87d1186.png"/></a>
+    					
+    					
+    					
+    					
+    					<a href="http://www.sxscsxh.cn/index.html" target="_blank"><img src="https://res-img.n.gongyibao.cn/uploads/1dbdc970-d95e-45a8-859b-86e4e9abe89e/20201207/ad7fe156b06b46d8a38ae1dc23847bda.jpg"/></a>
+    					
+    					</li><li>
+    					
+    					
+    					<a href="https://www.hbcf.org.cn/" target="_blank"><img src="https://res-img.n.gongyibao.cn/uploads/1dbdc970-d95e-45a8-859b-86e4e9abe89e/20190722/98c2de5bf234450bbc1708bf6e671a6c.png"/></a>
+    					
+    					
+    					
+    					
+    					<a href="https://mzj.xa.gov.cn/" target="_blank"><img src="https://res-img.n.gongyibao.cn/uploads/1dbdc970-d95e-45a8-859b-86e4e9abe89e/20201208/cc0ef526ea8d4f39a92395f4c54fe23b.jpg"/></a>
+    					
+    					</li><li>
+    					
+    					
+    					<a href="http://xa.wenming.cn/" target="_blank"><img src="https://res-img.n.gongyibao.cn/uploads/1dbdc970-d95e-45a8-859b-86e4e9abe89e/20201208/d3d56ee6c9a44121b9a674b03e8efba1.jpg"/></a>
+    					
+    					
+    					
+    					
+    					<a href="http://shx.wenming.cn/" target="_blank"><img src="https://res-img.n.gongyibao.cn/uploads/1dbdc970-d95e-45a8-859b-86e4e9abe89e/20201208/5749e0759447464393bab37a9d60f961.jpg"/></a>
+    					
+    					</li><li>
+    					
+    					
+    					<a href="https://gongyi.qq.com/" target="_blank"><img src="https://res-img.n.gongyibao.cn/uploads/1dbdc970-d95e-45a8-859b-86e4e9abe89e/20201208/1212e5acd410414ca564e9719b28b609.jpg"/></a>
+    					
+    					
+    					
+    					
+    					<a href="http://www.zzcf.cn/" target="_blank"><img src="https://res-img.n.gongyibao.cn/uploads/1dbdc970-d95e-45a8-859b-86e4e9abe89e/20201208/2548a8b30d7641cb923cd1e9e36c20f5.jpg"/></a>
+    					
+    					</li><li>
+    					
+    					
+    					<a href="http://www.wnscs.cn/" target="_blank"><img src="https://res-img.n.gongyibao.cn/uploads/1dbdc970-d95e-45a8-859b-86e4e9abe89e/20201208/f1f57ea926e34297bba67bf24f5d809b.jpg"/></a>
+    					
+    					
+    					
+    					
+    					<a href="https://www.wh-charity.com/" target="_blank"><img src="https://res-img.n.gongyibao.cn/uploads/1dbdc970-d95e-45a8-859b-86e4e9abe89e/20201208/3479dba49663408bb25484b794a86a24.jpg"/></a>
+    					
+    					</li><li>
+    					
+    					
+    					<a href="http://www.wenming.cn/" target="_blank"><img src="https://res-img.n.gongyibao.cn/uploads/1dbdc970-d95e-45a8-859b-86e4e9abe89e/20201208/a778ca38d9a041b9a49ab27235d6eaef.jpg"/></a>
+    					
+    					
+    					
+    					
+    					<a href="https://www.gongyibao.cn/" target="_blank"><img src="https://res-img.n.gongyibao.cn/uploads/1dbdc970-d95e-45a8-859b-86e4e9abe89e/20190619/01da957109724eba96b86f603ef6cbe2.png"/></a>
+    					
+    					
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--友情链接 e-->
+<!--foot.html-->
+<div class="footerbox layout">
+    <div class="box layout">
+        <div class="jzzh layout">
+            <h2>捐赠账号</h2>
+            <div>
+                
+                <h4><p><span>开户单位:</span> 西安市慈善会</p></h4>
+                
+                <h4><p><span>开 户 行:</span> 浦发银行西安文景路支行</p></h4>
+                
+                <h4><p><span>捐赠账号:</span> 72130154800000128</p></h4>
+                
+                <h4><p><span>咨询电话:</span> 029-88868053 （财务室）</p></h4>
+                
+                <h4><p><span>网络筹款:</span> 029-88443165 （网信部）</p></h4>
+                
+                <!-- <h4><p><span>开户单位：</span>西安市慈善会</p></h4>
+                <h4><p><span>开 户 行：</span>浦发银行西安文景路支行</p></h4>
+                <h4><p><span>捐赠账号：</span>72130154800000128</p></h4>
+                <h4><p><span>咨询电话：</span>029-88868053 （财务室）</p></h4>
+                <h4><p><span>网络筹款：</span>029-88443165 （网信部）</p></h4> -->
+                <h4><p>备注：请注明捐款用途</p></h4>
+            </div>
+        </div>
+        <div class="txtLeft fl layout">
+            <span>西安市慈善会</span><br />
+地址：西安慈善大厦9层（未央区凤城四路105号）<br /> 
+电话：029-88443055<br /><a href="https://beian.miit.gov.cn" target="_blank" style="color:#c3c2c2">陕ICP备16001582号-1</a>
+邮箱：641457472@qq.com<br /> 
+邮编：710021  
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?02afd79451187a77208f1df386895c99";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+            <p>技术支持：<a href="http://www.houpujuyi.com" target="_blank">北京厚普聚益科技有限公司</a></p>
+        </div>
+        <div class="ImgRing  fr">
+            <ul class="layout">                        
+                <li class="fl">
+                    <img src="https://res-img.n.gongyibao.cn/uploads/1dbdc970-d95e-45a8-859b-86e4e9abe89e/20210825/248ac00189d845b09a8470fd7cf8e806.png"/>
+                    <p>扫码关注官方微信</p>
+                </li>
+                <li class="fr" style="display: none;">
+                    
+                    <img src="https://res-img.n.gongyibao.cn/uploads/1dbdc970-d95e-45a8-859b-86e4e9abe89e/20210705/7f66d0e8ac434349a5cde781168b8b43.png" alt="" />
+                    <p>微信/支付宝扫码捐款</p>
+                                        
+                </li>
+            </ul>            
+        </div>
+    </div>
+</div>
+
+<script type="text/html" id="glist">
+    <table>
+        <tr>
+            <th>日期</th>
+            <th>捐赠人</th>
+            <th>金额</th>
+            <th>备注</th>
+        </tr>
+        {{each list as value i}}
+         <tr>
+              <td>{{value.payTime.substr(5,5).replace('-','.')}}</td>
+              <td>{{value.donationNameExt.substr(0,4)}}</td>
+              <td>￥{{value.amount}}</td>
+              <td>{{value.projectTitle.substr(0,10)}}</td>
+          </tr>
+        {{/each}}
+    </table>
+</script>
+<script type="text/html" id="hlist">
+    <table>
+        <tr>
+            <th>日期</th>
+            <th>受助人</th>
+            <th>金额</th>
+            <th>备注</th>
+        </tr>
+        {{each list as value i}}
+         <tr>
+              <td>{{value.payTime.substr(5,5).replace('-','.')}}</td>
+              <td>{{value.donationNameExt.substr(0,4)}}</td>
+              <td>￥{{value.amount}}</td>
+              <td>{{value.projectTitle.substr(0,10)}}</td>
+          </tr>
+        {{/each}}
+    </table>
+</script>
+<script id="fanslist" type="text/html">
+    <table>
+        <tr>
+            <th>排名</th>
+            <th>名称</th>
+            <th>金额</th>
+        </tr>
+        {{each list as value i}}
+        <tr>
+            {{if i==0 || i==1 || i==2}}
+            <td><span class="yellowBg">{{i+1}}</span></td>
+            {{else}}
+            <td><span>{{i+1}}</span></td>
+            {{/if}}
+            <td>{{value.nikeName}}</td>
+            <td>￥{{value.donationAmount}}</td>
+        </tr>
+        {{/each}}
+    </table>
+</script>
+<script type="text/html" id="ilist">
+    {{each list as value i}}
+    <li>
+        {{if i==0 || i==1 || i==2}}
+        <span class="loveDName yellowBg"><span class="bg">{{i+1}}</span></span>
+        {{else}}
+        <span class="loveDName yellowBg"><span>{{i+1}}</span></span>
+        {{/if}}
+        <span class="loveDmounch">{{value.nikeName}}</span>
+        <span class="loveDproject">￥{{value.donationAmount}}</span>
+    </li>
+    {{/each}}
+</script>
+<script type="text/html" id="jlist">
+    {{each list as value i}}
+    <li>
+        <span class="DName">{{value.payTime.substr(5,5).replace('-','.')}}</span>
+        <span class="Dmounch">{{value.donationNameExt.substr(0,4)}}</span>
+        <span class="Dproject">￥{{value.amount}}</span>
+        <span class="Dother">{{value.projectTitle.substr(0,10)}}</span>
+    </li>
+    {{/each}}
+</script>
+<script type="text/javascript">
+    var vum = new Vue({
+      el:"#myCarousel"
+    })
+    $(function () {
+        var d=new Date();
+		var year=d.getFullYear();
+		var month=d.getMonth()+1;
+		var day=d.getDate();
+		$("#year1").html(year);
+		$("#year2").html(year);
+		$("#year3").html(year);
+		$("#month1").html(month);
+		$("#month2").html(month);
+		$("#month3").html(month);
+		$("#day1").html(day);
+		$("#day2").html(day);
+		$("#day3").html(day);
+
+    	var url="/api";
+    	//机构数据统计
+    	getCharityTotal(url);
+    	//捐赠记录
+    	getDonation(url,10);
+    	//救助记录
+        getDonation(url,50);
+    	//爱心榜单
+        $.getJSON(url+"/user/fans/jet/getFansListByTop100?pageNo=1&pageSize=10", function (data) {
+            if (data.statusCode > 0) {
+                var html = template('fanslist', data.dataPoints);
+                $("#container").append(html);
+            }
+        })
+        $(".askHelp").each(function(){
+            $(this).click(function(){
+                switchToMicro("ordinaryhelp?pid=","扫码发起求助","");
+            });
+        });
+		//基金个数
+		getFundCount(url);
+        initProjectConfigTime();
+        //网站公告
+        $(".NewList").imgscroll({
+            speed: 50,    //图片滚动速度
+            amount: 0,    //图片滚动过渡时间
+            width: 1,     //图片滚动步数
+            dir: "left"   // "left" 或 "up" 向左或向上滚动
+        });
+        
+    })
+
+    function getDonation(url,type){
+    	$.getJSON(url+"/trade/trade/es/front/listByFront?pageNo=1&pageSize=15&payState=1&tradeType="+type,function(data){
+            if(data.statusCode>0){
+                if(type==10){
+                    var html=template('jlist',data.dataPoints);
+                    $("#container1").empty();
+                    $("#container1").append(html);
+                    $(".LoveData").imgscroll({
+                        speed: 100,    //图片滚动速度
+                        amount: 0,    //图片滚动过渡时间
+                        width: 1,     //图片滚动步数
+                        dir: "up"   // "left" 或 "up" 向左或向上滚动
+                    });
+                }
+            }
+         });
+         $.getJSON(url+"/trade/trade/es/front/listByFront?pageNo=1&pageSize=10&payState=1&tradeType="+type,function(data){
+            if(data.statusCode>0){
+                if(type!=10){
+                    var html=template('hlist',data.dataPoints);
+                    $("#container2").empty();
+                    $("#container2").append(html);
+                }
+            }
+         });
+    }
+
+    /* function getCharityTotal(url){
+            $.getJSON(url+"/user/userCharity/jet/getChrityTotal",function(data){
+                if(data.statusCode>0){
+                     $("#sum_amount").html("￥"+data.dataPoints.donationAmount);
+                     $("#payout_amount").html("￥"+data.dataPoints.payoutAmount);
+                }
+            })
+        } */
+    function getCharityTotal(url){
+        $.getJSON(url+"/user/userCharity/jet/getChrityTotal",function(data){
+            if(data.statusCode>0){
+                var sum_money = data.dataPoints.donationAmount;
+                if (sum_money>=100000000){
+                    sum_money=(sum_money/100000000).toFixed(2)+"亿";
+                }
+                else if(sum_money>=10000){
+                    sum_money=(sum_money/10000).toFixed(2)+"万";
+                }
+                else {
+                    sum_money= sum_money+"元";
+                }
+                var payout_money = data.dataPoints.payoutAmount;				
+                if(payout_money!=null && payout_money!=undefined){
+                    payout_money = Math.abs(payout_money);
+                }
+                if(payout_money>=100000000){
+                    payout_money=(payout_money/100000000).toFixed(2)+"亿";
+                }
+                else if (payout_money>=10000){
+                    payout_money=(payout_money/10000).toFixed(2)+"万";
+                }
+                else{
+                    payout_money=payout_money+"元";
+                }
+                $("#sum_amount").html("￥"+sum_money);
+                $("#payout_amount").html("￥"+payout_money);
+                $("#pay_usercount").html(data.dataPoints.donationCount+"人/次");
+            }
+        })
+    }
+	function getFundCount(url){
+            $.getJSON(url+"/project/project/getCountByType?type=2",function(data){
+                if(data.statusCode>0){
+                     $("#fundCount").html(data.dataPoints);
+                }
+            });
+    }
+    //返回顶部
+    $(function(){
+        $("#izl_rmenu").each(function(){
+            $(this).find(".btn-phone").mouseenter(function(){
+                $(this).find(".ptxt").fadeIn("fast");
+                $(this).find(".ptxt").animate({left:'-170px'},'slow',function() {
+                });
+            });
+            $(this).find(".btn-phone").mouseleave(function(){
+                $(this).find(".ptxt").animate({left:'0px'},'slow',function() {
+                    $(this).fadeOut("fast");
+                }); 
+            });
+            $(this).find(".btn-code").mouseenter(function(){
+                $(this).find(".pic").fadeIn("fast");
+                $(this).find(".pic").animate({left:'-170px'},'slow',function() {
+                });
+            });
+            $(this).find(".btn-code").mouseleave(function(){
+                $(this).find(".pic").animate({left:'0px'},'slow',function() {
+                    $(this).fadeOut("fast");
+                }); 
+            });
+            $(this).find(".btn-wx").mouseenter(function(){
+                $(this).find(".pic").fadeIn("fast");
+                $(this).find(".pic").animate({left:'-170px'},'slow',function() {
+                });
+            });
+            $(this).find(".btn-wx").mouseleave(function(){
+                $(this).find(".pic").animate({left:'0px'},'slow',function() {
+                    $(this).fadeOut("fast");
+                }); 
+            });
+            $(this).find(".btn-top").click(function(){
+                $("html, body").animate({
+                    "scroll-top":0
+                },"fast");
+            });
+            $(this).find(".btn-code").click(function(){
+                $("html, body").animate({
+                    "scroll-top":document.getElementsByTagName('BODY')[0].scrollHeight
+                },"fast");
+            });
+        });
+        var lastRmenuStatus=false;
+        $(window).scroll(function(){//bug
+            var _top=$(window).scrollTop();
+            
+            if(_top>200){
+                $("#izl_rmenu").data("expanded",true);
+            }else{
+                $("#izl_rmenu").data("expanded",false);
+            }
+            if($("#izl_rmenu").data("expanded")!=lastRmenuStatus){
+                lastRmenuStatus=$("#izl_rmenu").data("expanded");
+                if(lastRmenuStatus){
+                    $("#izl_rmenu .btn-top").slideDown();
+                }else{
+                    $("#izl_rmenu .btn-top").slideUp();
+                }
+            }
+        });
+    }); 
+</script>
+</body>
+</html>

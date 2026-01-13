@@ -1,0 +1,15 @@
+{
+  "enabled": true,
+  "name": "Code Quality Analyzer",
+  "description": "Tự động phân tích các tệp mã nguồn đã được sửa đổi để tìm ra những điểm cần cải thiện, các \"mùi\" mã, các mẫu thiết kế và các thực tiễn tốt nhất. Cung cấp các đề xuất để nâng cao khả năng đọc hiểu, khả năng bảo trì và hiệu suất trong khi vẫn giữ nguyên chức năng.",
+  "version": "1",
+  "when": {
+    "type": "userTriggered"
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "Phân tích những thay đổi mã nguồn tôi vừa thực hiện để tìm ra những điểm cần cải thiện. Tập trung vào:\n\n1. **Mùi mã**: Xác định bất kỳ mùi mã nào như hàm quá dài, mã trùng lặp hoặc điều kiện phức tạp\n2. **Mẫu thiết kế**: Đề xuất các mẫu thiết kế phù hợp có thể cải thiện cấu trúc mã\n3. **Thực tiễn tốt nhất**: Kiểm tra việc tuân thủ các thực tiễn tốt nhất của React, TypeScript và lập trình nói chung\n4. **Khả năng đọc hiểu**: Đề xuất các cải tiến để tăng tính rõ ràng của mã và tài liệu\n5. **Khả năng bảo trì**: Xác định các khu vực có thể được tái cấu trúc để dễ bảo trì hơn\n6. **Hiệu suất**: Chỉ ra các tối ưu hóa hiệu suất tiềm năng\n7. **An toàn kiểu dữ liệu**: Đảm bảo sử dụng TypeScript và định nghĩa kiểu dữ liệu đúng cách\n\nVui lòng cung cấp các đề xuất cụ thể, khả thi trong khi vẫn duy trì chức năng hiện có. Hãy xem xét ngăn xếp công nghệ của dự án (React 18, TypeScript, Tailwind CSS) và các tiêu chuẩn mã hóa."
+  },
+  "workspaceFolderName": "dandan",
+  "shortName": "code-quality-analyzer"
+}
