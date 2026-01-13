@@ -9,11 +9,13 @@ Hướng dẫn này giúp bạn migrate toàn bộ mock data sang **NeonDB (Post
 ## 🏗️ Architecture Hiện Tại
 
 ### **Phase 1: Mock Data (Hiện tại)**
+
 ```
 Frontend → LocalStorage → Mock Data
 ```
 
 ### **Phase 2: Database Integration (Mục tiêu)**
+
 ```
 Frontend → API Layer → NeonDB PostgreSQL
 ```
@@ -25,16 +27,19 @@ Frontend → API Layer → NeonDB PostgreSQL
 ### **BƯỚC 1: Chuẩn Bị Database**
 
 #### 1.1. Verify NeonDB Connection
+
 ```bash
 psql 'postgresql://neondb_owner:npg_FxuKOEG3i9YV@ep-cool-darkness-a148vh1m-pooler.ap-southeast-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require'
 ```
 
 Kiểm tra connect thành công:
+
 ```sql
 SELECT NOW();
 ```
 
 #### 1.2. Chạy Schema Migration
+
 Copy nội dung file `database/schema.sql` và execute trong psql hoặc Neon Console:
 
 ```bash
@@ -47,6 +52,7 @@ psql '<connection-string>' -f database/schema.sql
 ```
 
 #### 1.3. Seed Initial Data
+
 Tương tự, execute `database/seed.sql`:
 
 ```bash
@@ -61,7 +67,7 @@ Kiểm tra data đã được import:
 
 ```sql
 -- Check tables created
-SELECT table_name FROM information_schema.tables 
+SELECT table_name FROM information_schema.tables
 WHERE table_schema = 'public';
 
 -- Check record counts
@@ -79,6 +85,7 @@ SELECT 'notices', COUNT(*) FROM notices;
 ```
 
 Kết quả mong đợi:
+
 ```
 projects   | 4
 funds      | 4
@@ -93,11 +100,13 @@ notices    | 3
 ### **BƯỚC 3: Cấu Hình Environment**
 
 #### 3.1. Copy `.env.example` → `.env`
+
 ```bash
 cp .env.example .env
 ```
 
 #### 3.2. Cập nhật `.env`
+
 ```env
 DATABASE_URL=postgresql://neondb_owner:npg_FxuKOEG3i9YV@ep-cool-darkness-a148vh1m-pooler.ap-southeast-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require
 
@@ -115,7 +124,7 @@ Tạo file test nhanh:
 // test-db.ts
 import { testConnection } from './database/db';
 
-testConnection().then(success => {
+testConnection().then((success) => {
   if (success) {
     console.log('✅ Database connection successful!');
   } else {
@@ -126,6 +135,7 @@ testConnection().then(success => {
 ```
 
 Chạy:
+
 ```bash
 npx tsx test-db.ts
 ```
@@ -137,11 +147,13 @@ npx tsx test-db.ts
 ### **Option A: Manual Migration (Khuyên dùng cho Production)**
 
 **Ưu điểm:**
+
 - Kiểm soát hoàn toàn
 - Review từng bước
 - An toàn, không mất data
 
 **Các bước:**
+
 1. Chạy `schema.sql` manually trong Neon Console
 2. Chạy `seed.sql` để import data mẫu
 3. Verify kết quả bằng SQL queries
@@ -162,6 +174,7 @@ npx tsx database/migrate.ts
 ```
 
 Script sẽ:
+
 1. ✅ Test connection
 2. ✅ Create tables (skip nếu đã tồn tại)
 3. ✅ Seed initial data
@@ -173,22 +186,24 @@ Script sẽ:
 
 ### **Tables Created:**
 
-| Table | Purpose | Records |
-|-------|---------|---------|
-| `projects` | Dự án từ thiện | 4 |
-| `funds` | Quỹ công ích | 4 |
-| `news` | Tin tức | 5 |
-| `donations` | Lịch sử quyên góp | 8 |
-| `volunteers` | Tình nguyện viên | 3 |
-| `notices` | Thông báo chạy | 3 |
-| `site_config` | Cấu hình web | 3 |
-| `admin_users` | Admin accounts | 1 |
+| Table         | Purpose           | Records |
+| ------------- | ----------------- | ------- |
+| `projects`    | Dự án từ thiện    | 4       |
+| `funds`       | Quỹ công ích      | 4       |
+| `news`        | Tin tức           | 5       |
+| `donations`   | Lịch sử quyên góp | 8       |
+| `volunteers`  | Tình nguyện viên  | 3       |
+| `notices`     | Thông báo chạy    | 3       |
+| `site_config` | Cấu hình web      | 3       |
+| `admin_users` | Admin accounts    | 1       |
 
 ### **Relations:**
+
 - `donations.project_id` → `projects.id` (Foreign Key)
 - Các bảng khác standalone
 
 ### **Indexes:**
+
 - Performance indexes trên `status`, `category`, `date` columns
 - Tự động update `updated_at` trigger
 
@@ -199,6 +214,7 @@ Script sẽ:
 ### **Phase 2A: API Service Layer** (Đã tạo sẵn)
 
 File `services/api.ts` cung cấp:
+
 - `ProjectsAPI` - CRUD operations
 - `FundsAPI` - CRUD operations
 - `NewsAPI` - CRUD operations
@@ -214,11 +230,13 @@ File `services/api.ts` cung cấp:
 Migrate từ LocalStorage → API calls:
 
 **Hiện tại (Mock):**
+
 ```typescript
 const [projects, setProjects] = useState(MOCK_PROJECTS);
 ```
 
 **Sau khi migrate (API):**
+
 ```typescript
 const [projects, setProjects] = useState([]);
 
@@ -241,6 +259,7 @@ npm install express @neondatabase/serverless cors dotenv
 ```
 
 Tạo Express endpoints:
+
 ```javascript
 // backend/server.js
 app.get('/api/projects', async (req, res) => {
@@ -250,20 +269,22 @@ app.get('/api/projects', async (req, res) => {
 ```
 
 Deploy backend lên:
+
 - Vercel Serverless Functions
 - Railway
 - Heroku
-- Hoặc cùng Netlify Functions
 
 ---
 
 ## 🛡️ Security Considerations
 
 ### **Hiện Tại (Development)**
+
 - ⚠️ Frontend gọi trực tiếp NeonDB (chỉ để development)
 - ⚠️ Connection string exposed trong code
 
 ### **Production (Khuyến nghị)**
+
 - ✅ Tạo Backend API riêng
 - ✅ Hide DATABASE_URL trong server env
 - ✅ Implement authentication (JWT)
@@ -292,7 +313,9 @@ Deploy backend lên:
 ## 🐛 Troubleshooting
 
 ### Lỗi: "Cannot connect to database"
+
 **Giải pháp:**
+
 1. Check connection string đúng
 2. Verify Neon project đang active
 3. Check firewall/network
@@ -301,7 +324,9 @@ Deploy backend lên:
 ---
 
 ### Lỗi: "Table already exists"
+
 **Giải pháp:**
+
 - Bình thường! Script đã handle duplicate
 - Hoặc drop tables trước:
   ```sql
@@ -311,7 +336,9 @@ Deploy backend lên:
 ---
 
 ### Lỗi: "Permission denied"
+
 **Giải pháp:**
+
 - Check user có quyền CREATE TABLE
 - Verify đang dùng đúng database `neondb`
 
@@ -328,12 +355,14 @@ Deploy backend lên:
 ## 🎯 Summary
 
 ✅ **Đã hoàn thành:**
+
 - Schema design (8 tables)
 - Migration scripts (schema.sql + seed.sql)
 - API service layer (services/api.ts)
 - Database utility (database/db.ts)
 
 🔲 **Còn lại:**
+
 - Chạy migration vào NeonDB
 - Migrate Context sử dụng API
 - Update components
@@ -341,6 +370,6 @@ Deploy backend lên:
 
 ---
 
-**Tác giả:** AI Assistant  
-**Ngày tạo:** 2025-01-05  
+**Tác giả:** AI Assistant
+**Ngày tạo:** 2025-01-05
 **Version:** 1.0.0

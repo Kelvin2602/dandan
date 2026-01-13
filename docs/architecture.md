@@ -1,7 +1,7 @@
 # 🏗️ System Architecture
 
-**Project:** 长安仁爱慈善基金会管理系统  
-**Version:** 1.0.0  
+**Project:** 长安仁爱慈善基金会管理系统
+**Version:** 1.0.0
 **Last Updated:** 2026-01-11
 
 ---
@@ -86,43 +86,47 @@
 ## 🔄 Data Flow Patterns
 
 ### Pattern 1: Server-Side Rendering (SSR)
+
 ```
 User Request → Vite Dev Server → React Router → Page Component → Render
 ```
 
 ### Pattern 2: Client-Side Data Fetching
+
 ```
-Component Mount 
-  → useEffect Hook 
-  → API Service Call 
-  → Backend API 
-  → Database Query 
-  → JSON Response 
-  → State Update 
+Component Mount
+  → useEffect Hook
+  → API Service Call
+  → Backend API
+  → Database Query
+  → JSON Response
+  → State Update
   → Re-render
 ```
 
 ### Pattern 3: Form Submission
+
 ```
-User Input 
-  → React Hook Form 
-  → Validation 
-  → onSubmit Handler 
-  → API Service 
-  → Backend Endpoint 
-  → Database Transaction 
-  → Success/Error Response 
+User Input
+  → React Hook Form
+  → Validation
+  → onSubmit Handler
+  → API Service
+  → Backend Endpoint
+  → Database Transaction
+  → Success/Error Response
   → UI Feedback
 ```
 
 ### Pattern 4: Context State Management
+
 ```
-App.tsx 
-  → Context Provider (Auth/Data/SiteConfig) 
-  → Initial Data Load 
-  → State Distribution 
-  → Child Components 
-  → useContext Hook 
+App.tsx
+  → Context Provider (Auth/Data/SiteConfig)
+  → Initial Data Load
+  → State Distribution
+  → Child Components
+  → useContext Hook
   → Render with Context Data
 ```
 
@@ -192,24 +196,28 @@ dandan/
 ## 🧩 Core Modules
 
 ### 1. Authentication Module
+
 **Files:**
+
 - `contexts/AuthContext.tsx`
 - `pages/Admin/Login.tsx`
 - `server/index.ts` (routes: `/api/auth/*`)
 
 **Flow:**
+
 ```
-Login Form 
-  → AuthAPI.login(username, password) 
-  → POST /api/auth/login 
-  → bcrypt.compare(password, hash) 
-  → JWT Token Generation 
-  → localStorage.setItem('token') 
-  → AuthContext.setUser() 
+Login Form
+  → AuthAPI.login(username, password)
+  → POST /api/auth/login
+  → bcrypt.compare(password, hash)
+  → JWT Token Generation
+  → localStorage.setItem('token')
+  → AuthContext.setUser()
   → Protected Routes Access
 ```
 
 **Features:**
+
 - Password hashing with bcrypt
 - Token-based authentication
 - Session persistence
@@ -218,25 +226,29 @@ Login Form
 ---
 
 ### 2. Site Configuration Module
+
 **Files:**
+
 - `contexts/SiteConfigContext.tsx`
 - `pages/Admin/Settings.tsx`
 - `pages/Admin/components/NavigationSettings.tsx`
 - `server/index.ts` (routes: `/api/site-config`)
 
 **Flow:**
+
 ```
-App Mount 
-  → SiteConfigProvider Load 
-  → SiteConfigAPI.getConfig() 
-  → GET /api/site-config 
-  → Database Query (site_config table) 
-  → JSONB Parse 
-  → Context State 
+App Mount
+  → SiteConfigProvider Load
+  → SiteConfigAPI.getConfig()
+  → GET /api/site-config
+  → Database Query (site_config table)
+  → JSONB Parse
+  → Context State
   → All Components Access via useSiteConfig()
 ```
 
 **Data Structure:**
+
 ```typescript
 {
   headerImage: string,
@@ -249,6 +261,7 @@ App Mount
 ```
 
 **Key Features:**
+
 - Auto-save (2s debounce)
 - Real-time sync across components
 - Fallback to default values
@@ -257,13 +270,16 @@ App Mount
 ---
 
 ### 3. Projects Module
+
 **Files:**
+
 - `pages/Projects.tsx`
 - `pages/ProjectDetail.tsx`
 - `pages/Admin/ProjectManager.tsx`
 - `server/index.ts` (routes: `/api/projects/*`)
 
 **Database Schema:**
+
 ```sql
 CREATE TABLE projects (
     id SERIAL PRIMARY KEY,
@@ -281,6 +297,7 @@ CREATE TABLE projects (
 ```
 
 **CRUD Operations:**
+
 - GET `/api/projects` - List all projects
 - GET `/api/projects/:id` - Get single project
 - POST `/api/projects` - Create project (Admin)
@@ -290,17 +307,21 @@ CREATE TABLE projects (
 ---
 
 ### 4. News Module
+
 **Files:**
+
 - `pages/NewsDetail.tsx`
 - `pages/Admin/NewsManager.tsx` (if exists)
 - `server/index.ts` (routes: `/api/news/*`)
 
 **Categories:**
+
 - `charity` - 慈善资讯
 - `media` - 媒体报道
 - `district` - 区县动态
 
 **Features:**
+
 - Category filtering
 - Rich text content
 - Image attachments
@@ -309,15 +330,18 @@ CREATE TABLE projects (
 ---
 
 ### 5. Donations Module
+
 **Files:**
+
 - `pages/Admin/DonationManager.tsx`
 - `components/Home/DonorList.tsx` (if exists)
 - `server/index.ts` (routes: `/api/donations/*`)
 
 **Flow:**
+
 ```
-Donation Form 
-  → POST /api/donations 
+Donation Form
+  → POST /api/donations
   → Database Transaction:
       1. INSERT INTO donations
       2. UPDATE projects.raised_amount
@@ -357,6 +381,7 @@ App.tsx
 ## 🔐 Security Architecture
 
 ### Authentication Layer
+
 ```
 Request → Token Check → Verify Token → Route Handler
                  ↓
@@ -366,22 +391,27 @@ Request → Token Check → Verify Token → Route Handler
 ```
 
 ### Input Validation
+
 - React Hook Form validation
 - Backend schema validation
 - SQL injection prevention (Parameterized queries)
 - XSS protection (Content sanitization)
 
 ### Password Security
+
 - bcrypt hashing (salt rounds: 10)
 - No plaintext storage
 - Secure comparison
 
 ### CORS Policy
+
 ```typescript
-app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:5173',
-  credentials: true
-}));
+app.use(
+  cors({
+    origin: process.env.FRONTEND_URL || 'http://localhost:5173',
+    credentials: true,
+  })
+);
 ```
 
 ---
@@ -391,6 +421,7 @@ app.use(cors({
 ### Key Tables
 
 #### site_config (Key-Value Store)
+
 ```sql
 CREATE TABLE site_config (
     id SERIAL PRIMARY KEY,
@@ -401,12 +432,14 @@ CREATE TABLE site_config (
 ```
 
 **Usage:**
+
 - Flexible schema-less storage
 - Supports nested objects
 - Fast JSON operations
 - Easy versioning
 
 #### projects (Core Entity)
+
 ```sql
 CREATE TABLE projects (
     id SERIAL PRIMARY KEY,
@@ -421,6 +454,7 @@ CREATE TABLE projects (
 ```
 
 **Indexes:**
+
 ```sql
 CREATE INDEX idx_projects_category ON projects(category_id);
 CREATE INDEX idx_projects_status ON projects(status);
@@ -431,18 +465,21 @@ CREATE INDEX idx_projects_status ON projects(status);
 ## 🚀 Performance Optimizations
 
 ### Frontend
+
 1. **Code Splitting:** React.lazy() for large components
 2. **Memoization:** React.memo() for expensive renders
 3. **Context Optimization:** Separate contexts to prevent unnecessary re-renders
 4. **Image Optimization:** Lazy loading, responsive images
 
 ### Backend
+
 1. **Connection Pooling:** PostgreSQL connection pool
 2. **Query Optimization:** Proper indexes on foreign keys
 3. **Transaction Management:** BEGIN/COMMIT for data integrity
 4. **Caching Strategy:** (Future: Redis for frequently accessed data)
 
 ### Database
+
 1. **JSONB Indexing:** For site_config queries
 2. **Foreign Key Indexes:** Fast joins
 3. **Query Planning:** EXPLAIN ANALYZE for optimization
@@ -452,16 +489,19 @@ CREATE INDEX idx_projects_status ON projects(status);
 ## 🧪 Testing Strategy
 
 ### Unit Tests (Future)
+
 - Component tests with React Testing Library
 - API service tests
 - Utility function tests
 
 ### Integration Tests (Completed)
+
 - Navigation sync E2E test ✅
 - Auto-save feature test ✅
 - Admin CRUD operations test ✅
 
 ### Manual Testing Checklist
+
 - [x] User authentication flow
 - [x] Admin panel functionality
 - [x] Navigation sync
@@ -475,11 +515,13 @@ CREATE INDEX idx_projects_status ON projects(status);
 ## 📦 Deployment Architecture
 
 ### Development
+
 ```
 Vite Dev Server (Port 5173) + Backend Server (Port 3001) + PostgreSQL
 ```
 
 ### Production (Future)
+
 ```
 ┌─────────────┐
 │   Nginx     │ ← Reverse Proxy
@@ -496,19 +538,21 @@ Storage: S3/CloudFlare for images
 ## 🔧 Configuration Files
 
 ### `vite.config.ts`
+
 ```typescript
 export default defineConfig({
   plugins: [react()],
   server: {
     port: 5173,
     proxy: {
-      '/api': 'http://localhost:3001'
-    }
-  }
+      '/api': 'http://localhost:3001',
+    },
+  },
 });
 ```
 
 ### `tsconfig.json`
+
 ```json
 {
   "compilerOptions": {
@@ -523,6 +567,7 @@ export default defineConfig({
 ```
 
 ### `.env` (Example)
+
 ```bash
 DATABASE_URL=postgresql://user:password@host:5432/dbname
 PORT=3001
@@ -534,6 +579,7 @@ NODE_ENV=production
 ## 📚 Technology Stack
 
 ### Frontend
+
 - **Framework:** React 18.3
 - **Build Tool:** Vite 5.x
 - **Routing:** React Router 6.x
@@ -544,6 +590,7 @@ NODE_ENV=production
 - **TypeScript:** 5.x
 
 ### Backend
+
 - **Runtime:** Node.js
 - **Framework:** Express.js
 - **Database Driver:** pg (node-postgres)
@@ -552,25 +599,29 @@ NODE_ENV=production
 - **CORS:** cors middleware
 
 ### Database
+
 - **RDBMS:** PostgreSQL 14+
 - **ORM:** Raw SQL (for flexibility)
 - **Storage:** JSONB for configuration
 
 ### DevOps (Future)
+
 - **Container:** Docker
 - **CI/CD:** GitHub Actions
-- **Hosting:** Netlify/Vercel (Frontend) + Railway/Render (Backend)
+- **Hosting:** Vercel (Frontend) + Railway/Render (Backend)
 
 ---
 
 ## 🔗 API Endpoints Reference
 
 ### Authentication
+
 - `POST /api/auth/register` - Register new user
 - `POST /api/auth/login` - Login
 - `POST /api/auth/verify` - Verify token
 
 ### Projects
+
 - `GET /api/projects` - List all projects
 - `GET /api/projects/:id` - Get project details
 - `POST /api/projects` - Create project (Admin)
@@ -578,6 +629,7 @@ NODE_ENV=production
 - `DELETE /api/projects/:id` - Delete project (Admin)
 
 ### News
+
 - `GET /api/news` - List all news
 - `GET /api/news/:id` - Get news details
 - `POST /api/news` - Create news (Admin)
@@ -585,21 +637,25 @@ NODE_ENV=production
 - `DELETE /api/news/:id` - Delete news (Admin)
 
 ### Site Configuration
+
 - `GET /api/site-config` - Get site config
 - `POST /api/site-config` - Update site config (Admin)
 
 ### Donations
+
 - `GET /api/donations` - List donations
 - `POST /api/donations` - Create donation
 - `GET /api/stats/total-raised` - Get total raised amount
 
 ### Volunteers
+
 - `GET /api/volunteers` - List volunteers
 - `POST /api/volunteers` - Submit volunteer application
 - `PUT /api/volunteers/:id/status` - Update volunteer status (Admin)
 - `DELETE /api/volunteers/:id` - Delete volunteer (Admin)
 
 ### Utilities
+
 - `POST /api/upload` - Upload file
 - `GET /api/health` - Health check
 - `GET /api/test` - Test endpoint
@@ -616,6 +672,6 @@ NODE_ENV=production
 
 ---
 
-**Maintained by:** AI Assistant  
-**Last Review:** 2026-01-11  
+**Maintained by:** AI Assistant
+**Last Review:** 2026-01-11
 **Version:** 1.0.0
